@@ -17,5 +17,5 @@ Nosotros
 -Antonela Marengo:
 -Juan Cruz:
 -Valentin:
--Thiago:
+-Thiago: amante de la tecnologia y el deporte. nuevo en el mundo de la programacion y siempre dispuesto a apernder cosas nuevas!
 
