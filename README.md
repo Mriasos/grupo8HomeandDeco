@@ -15,7 +15,7 @@ Nuestra audiencia son las personas que disfrutan de la funcionalidad, las línea
 
 ## Nosotros
 + ***Maria Sosa***: Descubriendo un mundo en constante movimiento como la programación.
-+ ***Elias Yori***: 
++ ***Elias Yori***: Entusiasta y extrovertido; buscando aprender y perfeccionar tecnicas y cnonocimientos relacionados al amplio mundo del desarrollo.
 + ***Antonela Marengo***: Siempre dispuesta a adquirir nuevos conocimientos. Saliendo de mi zona de confort a traves de la programacion, pero disfrutando al maximo del proceso. 
 + ***Juan Cruz Botet***:
 + ***Valentin Milone***:
