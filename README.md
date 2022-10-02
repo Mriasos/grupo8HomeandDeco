@@ -17,7 +17,8 @@ Nuestra audiencia son las personas que disfrutan de la funcionalidad, las línea
 + ***Maria Sosa***: Descubriendo un mundo en constante movimiento como la programación.
 + ***Elias Yori***: Entusiasta y extrovertido; buscando aprender y perfeccionar tecnicas y conocimientos relacionados al amplio mundo del desarrollo.
 + ***Antonela Marengo***: Siempre dispuesta a adquirir nuevos conocimientos. Saliendo de mi zona de confort a traves de la programacion, pero disfrutando al maximo del proceso. 
-+ ***Juan Cruz Botet***:
++ ***Juan Cruz Botet***: intrigado por el mundo de la programación, estudiando y aprendiendo de este maravilloso y gratificante campo, sabiendo que se puede aplicar hasta en la vida misma.
+Versátil, creativo y adaptativo. Amante de la salud física, vegetariano.
 + ***Valentin Milone***:
 + ***Thiago Menin***: Amante de la tecnologia y el deporte. Nuevo en el mundo de la programacion y siempre dispuesto a aprender cosas nuevas!
 
