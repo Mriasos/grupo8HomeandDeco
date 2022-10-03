@@ -19,6 +19,5 @@ Nuestra audiencia son las personas que disfrutan de la funcionalidad, las línea
 + ***Antonela Marengo***: Siempre dispuesta a adquirir nuevos conocimientos. Saliendo de mi zona de confort a traves de la programacion, pero disfrutando al maximo del proceso. 
 + ***Juan Cruz Botet***: intrigado por el mundo de la programación, estudiando y aprendiendo de este maravilloso y gratificante campo, sabiendo que se puede aplicar hasta en la vida misma.
 Versátil, creativo y adaptativo. Amante de la salud física, vegetariano.
-+ ***Valentin Milone***:
++ ***Valentin Milone***: Soy una persona proactiva, dispuesta a seguir creciendo en el mundo de programación, el cual es un mundo que me entusiasma y me lleva a querer aprender cada día más.
 + ***Thiago Menin***: Amante de la tecnologia y el deporte. Nuevo en el mundo de la programacion y siempre dispuesto a aprender cosas nuevas!
-
