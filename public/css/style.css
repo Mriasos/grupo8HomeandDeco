@@ -1,0 +1,33 @@
+.promociones{
+    background-color: rgb(243, 136, 153);
+    text-align: center;
+    font-size: 23px;
+}
+
+.logo{
+    text-align: center;
+}
+
+.busqueda{
+    background-color: rgb(244, 208, 154);
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.categorias{
+    display: flex;
+    justify-content:space-around;
+}
+
+.p_destacados{
+    text-align: center;
+    background-color: pink;
+}
+
+
+
+
+
+
+

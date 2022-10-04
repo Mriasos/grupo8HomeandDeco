@@ -11,5 +11,5 @@ app.listen(puerto, ()=> {
 });
 
 app.get('/', (req, res)=>{
-    res.sendFile(path.resolve('home/index.html'))
+    res.sendFile(path.resolve('views/index.html'))
 })
