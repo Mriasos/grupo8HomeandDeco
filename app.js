@@ -13,3 +13,7 @@ app.listen(puerto, ()=> {
 app.get('/', (req, res)=>{
     res.sendFile(path.resolve('views/index.html'))
 })
+
+app.get('/loggin', (req, res)=>{
+    res.sendFile(path.resolve('views/loggin.html'))
+})
