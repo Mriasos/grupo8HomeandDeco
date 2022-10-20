@@ -1,0 +1,26 @@
+#tabla{
+    width: 90vw;
+    margin-top: 100px;
+}
+
+#buttons-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#buttons-container > button{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #f7d6eb;
+    border: 0px;
+    padding: 5px;
+}
+
+#refresh-cart{
+    background-color: #e2725b84;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
