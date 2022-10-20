@@ -101,3 +101,37 @@ img {
 
 
 
+
+footer{
+    background-color:#cdc1b3
+}
+.informacion{
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.redes-flex, .new-flex, .contacto-flex, .info-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.fab.fa-facebook-square, .fa-instagram{
+    align-self: center;
+    font-size: 26px;
+    margin: 5px
+}
+
+h4{
+    font-family: "Montserrat", Sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+}
+
+.piePag{
+    font-size: 14px;
+}
+
+.suscribite{
+    border-radius: 15px;
+}
