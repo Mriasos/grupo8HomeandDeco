@@ -6,15 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
 rel="stylesheet" />
-    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\styleloggin.css">
         <title>Formulario Login</title>
 </head>
+
+<header class="head">
+    <section class="encabezado">
+        <div class="promociones">
+            <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
+        </div>
+        <div class="logo-img">
+            <div class="logo"> <img width="100%" src="./imagenes/logoFinal.jpg" alt="HOME&DECO"> </div>
+        </div>
+
+        <div class="carrito_login"> <i class="fas fa-shopping-basket"></i> </div>
+        <div class="user"> <i class="far fa-user-circle"></i> </div>
+
+        <!-- BARRA BUSQUEDA -->
+
+        <div class="flexsearch">
+
+            <form class="flexsearch--form" action="#" method="post">
+                <div class="flexsearch--input-wrapper">
+                    <input class="flexsearch--input" type="search" placeholder="Buscar productos">
+                </div>
+                <input class="flexsearch--submit" type="submit" value="&#10140;" />
+            </form>
+
+        </div>
+        <nav class="categorias">
+            <a href="/"> Living </a>
+
+            <a href="/"> Cocina </a>
+
+            <a href="/"> Dormitorio </a>
+
+            <a href="/"> Exterior </a>
+
+            <a href="/"> Contacto </a>
+        </nav>
+
+
+    </section>
+
+</header>
 <body>
     <div class="container">
         
     <form method="post" action=" /contacto"> 
         <div>
-            <label> Bienvenido</label><br>
+            <label></label><br>
             <h5>Inicie sesiòn</h5>   
     <input class="controls" type="text" name="usuario" value=""placeholder="Usuario">
     <input class="controls" type="password" name="contraseña" value=""placeholder="Contraseña">
@@ -27,10 +68,52 @@ rel="stylesheet" />
     <div class="login">
         <h2>Ingrese con red social</h2>
         <div class="login-items">
-          <button class="fb"><i class="fab fa-facebook"></i> Acceder con Facebook</button>
-          <button class="tw"><i class="fab fa-twitter"></i> Acceder con Twitter</button>
-          <button class="correo"><i class="fas fa-envelope-square"></i> Acceder con Correo</button>
+          <button class="fb"><i class="fab fa-facebook"></i></button>
+          <button class="tw"><i class="fab fa-twitter"></i></button>
+          <button class="correo"><i class="fas fa-envelope-square"></i></button>
         </div>
         </div>
+        <footer class="pie">
+            <div class="informacion">
+    
+    
+                <div class="info-flex">
+                    <h4>INFORMACION</h4>
+                    <p class="piePag"> Preguntas frecuentes </p>
+                    <p class="piePag"> Cambios y devoluciones </p>
+                    <p class="piePag"> Envios </p>
+                </div>
+    
+    
+    
+    
+                <div class="contacto-flex">
+                    <h4>CONTACTO</h4>
+                    <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p>
+                    <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p>
+                    <p class="piePag"> <i class="far fa-envelope"></i> Email </p>
+                </div>
+    
+    
+                <div class="new-flex">
+                    <h4>NEWSLETTER</h4>
+                    <h6> Suscribite para recibir alertas</h6>
+                    <form class="suscribite" action="/" method="get">
+                        <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                        <button type="submit"> Suscribirse </button>
+    
+                    </form>
+                </div>
+    
+    
+                <div class="redes-flex">
+                    <h4>NUESTRAS REDES</h4>
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+    
+            </div>
+    
+        </footer>
 </body>
 </html>
