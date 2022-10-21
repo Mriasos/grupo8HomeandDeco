@@ -17,3 +17,7 @@ app.get('/', (req, res)=>{
 app.get('/loggin', (req, res)=>{
     res.sendFile(path.resolve('views/loggin.html'))
 })
+
+app.get('/cart', (req, res)=>{
+    res.sendFile(path.resolve('views/cart.html'))
+})
