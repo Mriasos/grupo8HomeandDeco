@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\product.css">
+    
+
+    
+    <title>HOME&DECO</title>
+</head>
+
+<body>
+    <header class="head">
+    
+        <div class="promociones">
+            <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
+        </div>
+        <div class="logo-img">
+            <div class="logo"> <img  id="img-principal" width="100%" src="./imagenes/logo-header.jpg" alt="HOME&DECO"> </div>
+        </div>
+
+        <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a>  </div>
+        <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i>  </a> </div>
+
+        <!-- BARRA BUSQUEDA -->
+
+        <div class="flexsearch">
+
+            <form class="flexsearch--form" action="#" method="post">
+                <div class="flexsearch--input-wrapper">
+                    <input class="flexsearch--input" type="search" placeholder="Buscar productos">
+                </div>
+                <input class="flexsearch--submit" type="submit" value="&#10140;" />
+            </form>
+
+        </div>
+        <nav class="categorias">
+            <a href="/"> Living </a>
+
+            <a href="/"> Cocina </a>
+
+            <a href="/"> Dormitorio </a>
+
+            <a href="/"> Exterior </a>
+
+            <a href="/"> Contacto </a>
+        </nav>
+<!-- MENU BURGER -->
+<div class="burger-menu">
+<i class="fas fa-bars"></i>
+</div>
+
+  
+
+</header>
+
+    <section class="cuerpo">
+        <div class = "container-product-detail">
+            <div class = "imagenes">
+                <div class = "img-producto-principal">
+                    <img class="img-principal" src="imagenes/lampara1.jpg" alt="Lampara" ></img>
+                </div>
+                <div class = "img-productos-secundaria">
+                    <div><img width="100" src="imagenes/lampara2.jpg" alt="Lampara" class="product_img"></img></div>
+                    <div><img width="100" src="imagenes/lampara3.jpg" alt="Lampara" class="product_img"></img></div>
+                    <div><img width="100" src="imagenes/lampara4.jpg" alt="Lampara" class="product_img"></img></div>
+                </div>
+            </div>
+            <div class="main-article">
+                <div class = "flex-conteiner-detalle">
+                    <h1 class = "titulo">LAMPARA</h1>
+                    <p class = "precio">$ 20.000</p>
+                    <div class="build-credit-card">
+                        <p><i class="fas fa-hand-holding-usd"></i></p>
+                        <strong class = "cuotas">6</strong>
+                        <p>CUOTAS SIN INTERES</p>
+                        <strong class = "precio-cuotas">$900,50</strong>
+                    </div>
+                    <div class = "descuento-efectivo">
+                        <p><i class="fas fa-hand-holding-usd"></i></p>
+                        <strong class = "porc-descuento">10 % de descuento</strong>
+                        <p>pagando en efectivo</p>
+                    </div>
+                    <div class= "container-cantidad">
+                        <label for="cantidad" class = "cantidad-label">Cantidad</label>
+                        <input class = "cantidad-input" name = "cantidad" id = "cantidad" type="number" value="1">
+                    </div>
+                    <div class = "flex-container-tam">
+                        <label for="tamanio">Tamaño</label>
+                    
+                        <div class = "flex-container-tam-opcion">
+                            <select  name = "tamanio">
+                                <option disabled="">Seleccione una Opcion</option>
+                                        <option value="ESTANDAR">ESTANDAR</option>
+                                        <option value="GRANDE">GRANDE</option>
+                                        <option value="CHICO/A">CHICO/A</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class = "container-button">
+                    <button class="button-carrito"><span>AGREGAR AL CARRITO</span></button>
+                </div>
+                <div class = "medios-envio">
+                    <p><i class="fas fa-hand-holding-usd"></i> MEDIOS DE ENVIO</p>
+                </div>
+                <div class = "codigo-postal-y-button">
+                    <div class= "codigo-postal">
+                        <label for="codigo" class = "codigo-label"></label>
+                        <input class = "codigo-input" name = "codigo" id = "codigo" type="tell" placeholder="Ingrese su codigo postal">
+                    </div>
+                    <div>
+                        <button class="button-calcular-envio"><span>CALCULAR</span></button>
+                    </div>
+                </div>
+                <div class = "detalle">
+                    <h3><strong>DESCRIPCION</strong></h3>
+                    <p>Lámpara colgante
+                        
+                        Material: MDF
+                        Medidas: 
+                        -Chica: Alto: 25cm | Diámetro inferior: 20cm | Diámetro superior: 12cm.
+                        -Mediana: Alto: 25cm | Diámetro inferior: 30cm | Diámetro superior: 17cm
+                        -Grande: Alto: 25cm | Diámetro inferior: 40cm | Diámetro superior: 21cm
+                        -XL: Alto: 50cm | Diámetro: 60cm.
+                        
+                        Todas las medidas incluyen Cable + Florón: 100 cm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie">
+        <div class="informacion">
+
+
+            <div class="info-flex">
+                <h4>INFORMACION</h4>
+                <p class="piePag"> Preguntas frecuentes </p>
+                <p class="piePag"> Cambios y devoluciones </p>
+                <p class="piePag"> Envios </p>
+            </div>
+
+
+
+
+            <div class="contacto-flex">
+                <h4>CONTACTO</h4>
+                <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p>
+                <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p>
+                <p class="piePag"> <i class="far fa-envelope"></i> Email </p>
+            </div>
+
+
+            <div class="new-flex">
+                <h4>NEWSLETTER</h4>
+                <h6> Suscribite para recibir alertas</h6>
+                <form class="suscribite" action="/" method="get">
+                    <input type="email" name="email" placeholder="ejemplo@gmail.com">
+                    <button type="submit"> Suscribirse </button>
+
+                </form>
+            </div>
+
+
+            <div class="redes-flex">
+                <h4>NUESTRAS REDES</h4>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
