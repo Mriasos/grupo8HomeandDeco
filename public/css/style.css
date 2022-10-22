@@ -42,12 +42,16 @@ img {
 }
 
 .logo-img{
+    height: 100%;
     display: flex;
     justify-content: center;
 }
+#img-principal{
+    border: solid 1px pink;
+    border-radius: 40px;
+}
 
-
-.logo{
+.logo-img .logo{
     width: 30%;
     height: 10%;
 
