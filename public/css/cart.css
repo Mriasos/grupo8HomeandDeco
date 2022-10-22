@@ -1,6 +1,13 @@
 #tabla{
-    width: 90vw;
+    width: 100%;
     margin-top: 100px;
+    margin-block-end: 10px;
+    background-color: #f7d6eb;
+    border: solid 1px black;
+}
+
+#tabla>tr> th{
+background-color: #e2725b84 ;
 }
 
 #buttons-container{
@@ -25,24 +32,28 @@
 
 }
 
+
 .total-cart{
     text-align:center;
- 
+    width: 50vw;
+    margin: auto;
+    margin-top: 80px;
+    margin-block-end: 80px;
+    height: 500px;
+    border: solid 1px black;
 
 }
 
 #total{
     background-color:#e2725b84;
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
-    width: 50vw;
     margin:0px auto;
     display: flex;
-    }
+    justify-content: center;
 
-.total-cart > #total{
-     margin-top: 80px;
-}
+
+    }
 
 .content-parcial{
     display: flex;
@@ -75,7 +86,26 @@ justify-content: space-around;
 
 #regalo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    background-color: #f7d6eb;
+    height: 100px;
+}
+
+#regalo>div> button{
+    background-color: #e2725b77;
+    border-radius: 10px;
+    border: solid 1px black;
+
+}
+
+#precios-envio >tbody> tr> td{
+width: 50%;
+background-color: #f7d6eb;
+}
+
+ #precios-envio{
+    height: 50%;
+
 }
 
