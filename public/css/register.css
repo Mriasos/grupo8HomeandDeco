@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&family=Roboto:wght@300;700&display=swap");
+
+body {
+  font-family: "Montserrat", Sans-serif;
+  margin: 0%;
+}
+/*HEADER*/
+
+.fas.fa-shopping-basket {
+  position: absolute;
+  left: 95%;
+  top: 57px;
+}
+
+.far.fa-user-circle {
+  position: absolute;
+  left: 86%;
+  top: 57px;
+  cursor: pointer;
+}
+
+.fas.fa-shopping-basket:hover,
+.far.fa-user-circle:hover {
+  font-size: 25px;
+}
+
+.promociones {
+  background-color: antiquewhite;
+  text-align: center;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  margin: 0px;
+}
+
+img {
+  max-width: 100vw;
+  text-align: center;
+}
+
+.logo-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-img .logo {
+  width: 25%;
+  height: 10%;
+}
+
+.flexsearch--form {
+  display: flex;
+  justify-content: center;
+}
+.flexsearch--input,
+.flexsearch--submit {
+  background-color: #fffdd0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgba(67, 67, 67, 0.3);
+}
+
+.flexsearch--input {
+  width: 30vw;
+}
+
+
+/*FOOTER*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #cdc1b3;
+}
+.informacion {
+  display: flex;
+  justify-content: space-between;
+}
+
+.redes-flex,
+.new-flex,
+.contacto-flex,
+.info-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.fab.fa-facebook-square,
+.fa-instagram {
+  align-self: center;
+  font-size: 26px;
+  margin: 5px;
+}
+
+h4 {
+  font-family: "Montserrat", Sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.piePag {
+  font-size: 14px;
+}
+
+.suscribite {
+  border-radius: 15px;
+}
+
+/*FORMULARIO REGISTRO*/
+.registro{
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    margin: auto;
+    background-color:rgb(250, 235, 215);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 450px;
+}
+.form_input{
+    width: 100%;
+    color: #706c6c;
+    font-size: 1em;
+    padding: .6em .3em; 
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+    font-family: 'Roboto', sans-serif;
+}
+#tituloform{
+    text-align: center;
+}
+form #nombre{
+    border-radius: 5px;
+    width:75%;
+    cursor: pointer;
+    transition: .5s, color .3s;
+}
+form #apellido{
+    width: 75%;
+    cursor: pointer;
+}
+form #email{
+    width: 75%;
+    cursor: pointer;
+}
+form #fnac{
+    width: 75%;
+    cursor: pointer;
+    
+}
+form #Contraseña{
+    width: 75%;
+    cursor: pointer;
+}
+.boton_enviar{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    width: 50%;
+    background-color: #f6becf;
+    padding: .6em .3em;
+    border-radius: 20px; 
+    border: none;
+    outline: none;
+    font-size: 1em;
+   
+}
+
+@media (min-width: 769px){
+.registro{
+        height: 420px;
+    }
+}
