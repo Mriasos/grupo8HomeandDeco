@@ -1,16 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&family=Roboto:wght@300;700&display=swap');
 
- 
+
 body{
     font-family: "Montserrat", Sans-serif;
-    background-color: #fefdf1;
+    margin: 0%;
 }
 
 /*HEADER*/
 
-.encabezado{
-    background-color: #fefdf1;
-}
+
 
 
 .fas.fa-shopping-basket{
@@ -21,13 +19,18 @@ body{
 
 .far.fa-user-circle{
     position: absolute;
-    left: 91%;
+    left: 86%;
     top: 57px;
+    cursor: pointer;
+}
+
+.fas.fa-shopping-basket:hover, .far.fa-user-circle:hover{
+    font-size: 25px;
 }
 
 
 .promociones{
-    background-color: #f7d6eb;
+    background-color: antiquewhite;
     text-align: center;
     font-family: "Montserrat", Sans-serif;
     font-size: 12px;
@@ -46,15 +49,10 @@ img {
     display: flex;
     justify-content: center;
 }
-#img-principal{
-    border: solid 1px pink;
-    border-radius: 40px;
-}
 
 .logo-img .logo{
-    width: 30%;
+    width: 25%;
     height: 10%;
-
     }
 
 
@@ -72,14 +70,14 @@ img {
 }
  
 .flexsearch--input{
-    width: 60vw;
+    width: 30vw;
 }
 
 
 
 .categorias{
     display: flex;
-    justify-content:space-around;
+    justify-content:space-evenly;
     padding: 10px;
     font-size: 13px;
 }
@@ -109,33 +107,102 @@ img {
 footer{
     background-color:#cdc1b3
 }
-.informacion{
-    display: flex;
-    justify-content: space-between;
-  
-}
-
-.redes-flex, .new-flex, .contacto-flex, .info-flex{
-    display: flex;
-    flex-direction: column;
-}
 
 .fab.fa-facebook-square, .fa-instagram{
     align-self: center;
-    font-size: 26px;
-    margin: 5px
+    font-size: 25px;
+    margin: 5px;
+    color: black
 }
+
+
+
 
 h4{
     font-family: "Montserrat", Sans-serif;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 300;
+    text-align: center;
+    margin-inline: auto;
+    text-decoration: underline;
+}
+
+
+.informacion {
+    flex-direction: column;
+}
+
+.redes-flex, .new-flex, .contacto-flex, .info-flex{
+    text-align:center ;
 }
 
 .piePag{
     font-size: 14px;
+    color: #00000085;
 }
 
 .suscribite{
-    border-radius: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.suscrib{
+background-color: #D8AF8C;
+border-radius: 5px;
+color: white;
+cursor: pointer;
+font-size: 15px;
+margin-top: 5px;
+}
+
+.newsletter{
+    text-align: center;
+    font-family: montserrat;
+    color: #00000085;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: underline gray
+}
+
+
+
+
+
+@media(min-width: 576px){
+
+    .informacion{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+      height: 219px;
+    }
+    
+    .redes-flex, .new-flex, .contacto-flex, .info-flex{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+    
+    h4{
+        text-decoration: overline;
+}
+
+.fab.fa-facebook-square, .fab.fa-instagram{
+    cursor: pointer;
+}
+
+.fab.fa-facebook-square:hover, .fab.fa-instagram:hover{
+    font-size: 35px;
+}
+
+
+.far.fa-user-circle{
+    left: 90%
+}
 }
