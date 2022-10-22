@@ -172,6 +172,15 @@ form #Contraseña{
 }
 
 @media (min-width: 769px){
+    .logo-img {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    .logo{
+        width: 100%;
+    }
 .registro{
         height: 420px;
     }
