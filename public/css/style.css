@@ -22,7 +22,15 @@ body{
     cursor: pointer;
 }
 
-.fas.fa-shopping-basket:hover, .far.fa-user-circle:hover{
+.far.fa-address-card{
+    position: absolute;
+    left: 77%;
+    top: 57px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.fas.fa-shopping-basket:hover, .far.fa-user-circle:hover, .far.fa-address-card:hover  {
     font-size: 25px;
 }
 
@@ -267,6 +275,10 @@ a:hover{
 
 .far.fa-user-circle{
     left: 90%
+}
+
+.far.fa-address-card{
+    left: 84%;
 }
 
 .burger-menu {
