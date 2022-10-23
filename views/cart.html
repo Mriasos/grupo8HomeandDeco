@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css\style.css">
     <link rel="stylesheet" href="css/cart.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/b466abb110.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="head">
@@ -52,7 +53,7 @@
     </header>
     <section>
         <table id="tabla">
-            <tr>
+            <tr id="tablacabecera">
                 <th>
 
                 </th>
@@ -73,7 +74,7 @@
             
             <tbody>
                 <th>
-                    <img src="/imagenes/mesa de comedor.jpg" alt="mesa" width="100">
+                    <img src="/imagenes/mesa de comedor.jpg" alt="mesa" width="200">
                 </th>
                 <th>
                 Mesa de comedor    
@@ -82,7 +83,7 @@
                 $125.000
                 </th>
                 <th>
-                    1
+                    <input type="number" value="1">
                 </th>
                 <th>
                     $125.000
@@ -101,7 +102,7 @@
             </button>
         </div>
         <div id="refresh-cart">
-            <i class="fa-solid fa-box-check"></i>
+            <i class="fa-regular fa-circle-check"></i>
             Carrito actualizado
         </div>
 
@@ -116,15 +117,16 @@
 Total parcial
             </td>
             <td>
-$125000
+$125.000
             </td>
         </tr>
          <tr>
             <td>
 Envio
             </td>
-            <td>
-                Acordar Envio <br> las actualizaciones de envio se actualizaran durante el pago <br> Calcular envio
+            <td class="padding">
+                Acordar Envio <br> las actualizaciones de envio se actualizaran durante el pago. <br><br>
+              Calcular envio
             </td>
         </tr>
           <tr>
@@ -132,7 +134,7 @@ Envio
 Total 
             </td>
             <td>
-$125000
+$125.000
             </td>
         </tr>
     </tbody>
@@ -196,6 +198,7 @@ $125000
         </div>
 
     </footer>
+   
 </body>
 
 </html>
