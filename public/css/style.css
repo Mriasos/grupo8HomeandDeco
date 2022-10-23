@@ -141,8 +141,12 @@ body{
     padding: 4px;
     color: white;
     font-size: 16px;
+    
 }
 
+.button-carrito-home{
+    cursor: pointer;
+}
 .precio{
     letter-spacing: 2.0px;
 }
