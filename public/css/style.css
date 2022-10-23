@@ -80,7 +80,7 @@ body{
 }
 
 .fas.fa-bars {
-    background-color:#ffcce1;
+    background-color: #ffccf799;
     padding: 10px;
     border-radius: 6px;
 }
@@ -89,17 +89,28 @@ body{
 
 /*MAIN*/
 
-.CARRUSEL{
-    width: 60;
-    justify-content: center;
+
+.imagen-principal-main{
     display: flex;
-    flex-wrap: wrap ;
+    justify-content: center;
 }
 
+.imagen-main{
+    width: 100vw;
+}
 
 .p_destacados{
     text-align: center;
-    background-color: #faebd7;
+    letter-spacing: 1.5px;
+    display: flex;
+  justify-content: center;
+  
+}
+
+.linea{
+    align-self: center;
+    margin: 15px;
+   display: none;
 }
 
 .img_destacados{
@@ -112,7 +123,7 @@ body{
 
 .productos{
     margin: 10px;
-    background: beige;
+    background: #d8af8c1f;
     padding: 16px;
     border: solid 1px gainsboro;
     border-radius: 5px;
@@ -219,6 +230,10 @@ a:hover{
 
 
 @media(min-width: 576px){
+
+.linea{
+    display: block;
+}
 
     .informacion{
         display: flex;
