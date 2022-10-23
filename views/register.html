@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-rel="stylesheet" />
-    <link rel="stylesheet" href="css\styleloggin.css">
-        <title>Formulario Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css\register.css">
+    <title>HOME&DECO</title>
 </head>
 
-<header class="head">
+<body>
+    <header class="head">
     
             <div class="promociones">
                 <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
@@ -21,43 +24,23 @@ rel="stylesheet" />
 
             <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a>  </div>
             <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i>  </a> </div>
-</header>
-<body>
-    <div class="container">
-        
-    <form method="post" action=" /contacto"> 
-                   
-            <h2>Iniciar sesión</h2>   
-            <div class="form-body">
-            <i class= "fas fa-user"></i>
-            <input class="controls" type="text" placeholder="Usuario">
-            </div>
-            <div class="form-body">
-            <i class= "fas fa-lock"></i> 
-    <input class="controls" type="password" value= ""placeholder="Contraseña">
-</div> 
-<div class="form-body">
-    <input class="buttons"  type="submit" Value="Ingresar">
-</div>
-</div>
-       
-               <div class="contra">
-               <a href="#">¿Olvido su contraseña?</a> 
-               </div>
-            
-    
-    <div class="login"> <br>
-        <h2>Ingresar con red social</h2> <br>
-    </div>  
-        <div class="login-items">
-          <a href="#"class="fb"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="correo"><i class="fas fa-envelope-square"></i></a><br>
-        </div>
-        </div>
+    </header>
+
+   <body>
+    <form action="/views/loggin.html" class="registro">
+        <h1 id="tituloform">Regístrate</h1>
+        <label id="nombre">Escriba su nombre: <input type="text" class="form_input" id="nombre" name="nombre" placeholder="Ej: Federico"/></label>
+        <label id="apellido">Escriba su apellido: <input type="text" class="form_input" id="apellido" name="apellido" placeholder="Ej: Martinez"/></label>
+        <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email" placeholder="Ej: federico@gmail.com"/></label>
+        <label id="fnac">Fecha de nacimiento: <input type="date" class="form_input" id="fnac" name="fnac" /></label>
+        <label id="Contraseña">Contraseña: <input type="password" class="form_input" id="Contraseña" name="Contraseña"/></label>
+        <input type="submit" class="boton_enviar" value="Enviar">
+
+
     </form>
-</body><br>
-         <footer class="pie">
+   </body>
+
+    <footer class="pie">
         <div class="informacion">
 
 
@@ -73,9 +56,9 @@ rel="stylesheet" />
 
             <div class="contacto-flex">
                 <h4>CONTACTO</h4>
-                <a href="/info">  <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p></a> 
-                <a href="/info">  <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p> </a> 
-                <a href="/info"> <p class="piePag"> <i class="far fa-envelope"></i> Email </p></a> 
+               <a href="/info"> <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p></a> 
+               <a href="/info"> <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p> </a> 
+               <a href="/info>"> <p class="piePag"> <i class="far fa-envelope"></i> Email </p></a> 
             </div>
 
 
