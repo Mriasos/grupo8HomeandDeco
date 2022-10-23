@@ -9,8 +9,6 @@ body{
 /*HEADER*/
 
 
-
-
 .fas.fa-shopping-basket{
     position: absolute;
     left: 95%;
@@ -89,32 +87,72 @@ body{
 
 
 
-
+/*MAIN*/
 
 .CARRUSEL{
     width: 60;
-    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap ;
 }
 
 
 .p_destacados{
     text-align: center;
-    background-color: #EBB5D6;
+    background-color: #faebd7;
+}
+
+.img_destacados{
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 15px
+}
+
+.productos{
+    margin: 10px;
+    background: beige;
+    padding: 16px;
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+}
+
+.productos:hover{
+    box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 
+.button-carrito-home{
+    background-color: #D8AF8C;
+    border-radius: 5px;
+    padding: 4px;
+    color: white;
+    font-size: 16px;
+}
 
+.precio{
+    letter-spacing: 2.0px;
+}
 
+.descripcion{
+    letter-spacing: 1.5px;
+}
 
+#imagen5{
+    display: none;
+}
 
 
 footer{
-    background-color:#cdc1b3
+    background-color:#cdc1b3;
+    padding: 1px
 }
 
 .fab.fa-facebook-square, .fa-instagram{
     align-self: center;
-    font-size: 25px;
+    font-size: 30px;
     margin: 5px;
     color: black
 }
@@ -175,7 +213,9 @@ a:hover{
 }
 
 
-
+.copyright{
+    font-size: 10px;
+}
 
 
 @media(min-width: 576px){
@@ -184,7 +224,7 @@ a:hover{
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-      height: 219px;
+        height: 206px;
     }
     
     .redes-flex, .new-flex, .contacto-flex, .info-flex{
@@ -221,4 +261,22 @@ a:hover{
     font-size: 13px;
 }
 
+.productos{
+    width: 30%;
+}
+
+}
+
+
+@media(min-width: 992px){
+    .productos{
+        width: 170px;
+    }
+}
+
+
+@media(min-width: 1200px){
+#imagen5{
+    display:block;
+}
 }

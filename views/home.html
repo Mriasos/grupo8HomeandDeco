@@ -14,83 +14,113 @@
 
 <body>
     <header class="head">
-    
-            <div class="promociones">
-                <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
+
+        <div class="promociones">
+            <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
+        </div>
+        <div class="logo-img">
+            <div class="logo"> <img id="img-principal" width="100%" src="./imagenes/logo-header.jpg" alt="HOME&DECO">
             </div>
-            <div class="logo-img">
-                <div class="logo"> <img  id="img-principal" width="100%" src="./imagenes/logo-header.jpg" alt="HOME&DECO"> </div>
-            </div>
+        </div>
 
-            <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a>  </div>
-            <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i>  </a> </div>
+        <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a> </div>
+        <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i> </a> </div>
 
-            <!-- BARRA BUSQUEDA -->
+        <!-- BARRA BUSQUEDA -->
 
-            <div class="flexsearch">
+        <div class="flexsearch">
 
-                <form class="flexsearch--form" action="#" method="post">
-                    <div class="flexsearch--input-wrapper">
-                        <input class="flexsearch--input" type="search" placeholder="Buscar productos">
-                    </div>
-                    <input class="flexsearch--submit" type="submit" value="&#10140;" />
-                </form>
+            <form class="flexsearch--form" action="#" method="post">
+                <div class="flexsearch--input-wrapper">
+                    <input class="flexsearch--input" type="search" placeholder="Buscar productos">
+                </div>
+                <input class="flexsearch--submit" type="submit" value="&#10140;" />
+            </form>
 
-            </div>
-            <nav class="categorias">
-                <a href="/"> Living </a>
+        </div>
+        <nav class="categorias">
+            <a href="/"> Living </a>
 
-                <a href="/"> Cocina </a>
+            <a href="/"> Cocina </a>
 
-                <a href="/"> Dormitorio </a>
+            <a href="/"> Dormitorio </a>
 
-                <a href="/"> Exterior </a>
+            <a href="/"> Exterior </a>
 
-                <a href="/"> Contacto </a>
-            </nav>
- <!-- MENU BURGER -->
- <div class="burger-menu">
-    <i class="fas fa-bars"></i>
-</div>
+            <a href="/"> Contacto </a>
+        </nav>
+        <!-- MENU BURGER -->
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
 
-      
+
 
     </header>
 
-    <section class="cuerpo">
+    <main>
         <div class="CARRUSEL">
-            <img width="50%" src="./imagenes/portada.jpg" alt="imagenes">
+            <img width="400px" height="300px" src="./imagenes/cubrecama.jpeg" alt="imagenes">
         </div>
         <div class="p_destacados">
             <p> Productos Destacados</p>
         </div>
         <div class="img_destacados">
-            <div>
-                <img width="100%" src="./imagenes/producto1.jpg" alt="imagen producto1 ">
-                <div class="precio">
-                    <p>precio 1 </p>
+            <div class="productos">
+                <img width="170px" height="200px" src="./imagenes/lampara1.jpg" alt="imagen producto1 ">
+                <div class="info">                
+                    <p class="descripcion"> Lampara Atenas </p>
+                    <p class="precio">$5.000 </p>
+                    <div class="container-button">
+                        <button class="button-carrito-home"><span>Ver producto</span></button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="productos">
+                <img width="170px" height="200px" src="./imagenes/llavero.jpeg" alt="imagen producto2">
+                <div class="info">                   
+                    <p class="descripcion"> Llavero Cloe </p>
+                    <p class="precio">$2.500 </p>
+                    <div class="container-button">
+                        <button class="button-carrito-home"><span>Ver producto</span></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img width="100%" src="./imagenes/producto2.jpg" alt="imagen producto2">
-                <div class="precio">
-                    <p> precio 2 </p>
+            <div class="productos">
+                <img width="170px" height="200px" src="./imagenes/bandeja.jpeg" alt="imagen producto3">
+                <div class="info">
+                    <p class="descripcion"> Bandeja iris </p>
+                    <p class="precio">$1.800 </p>                   
+                    <div class="container-button">
+                        <button class="button-carrito-home"><span>Ver producto</span></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img width="100%" src="./imagenes/producto3sillas.jpeg" alt="imagen producto3">
-                <div class="precio">
-                    <p>precio 3 </p>
+            <div class="productos">
+                <img width="170px" height="200px" src="./imagenes/cubrecama.jpeg" alt="imagen producto 4">
+                <div class="info">
+                    <p class="descripcion"> Manta pompeya </p>
+                    <p class="precio">$20.000 </p>                 
+                    <div class="container-button">
+                        <button class="button-carrito-home"><span>Ver producto</span></button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <img width="100%" src="./imagenes/producto4sillon.jpg" alt="imagen producto 4">
-                <div class="precio">
-                    <p>precio 4 </p>
+
+            <div class="productos" id="imagen5">
+                <img width="170px" height="200px" src="./imagenes/recibidor.jpeg" alt="imagen producto 4">
+                <div class="info">
+                    <p class="descripcion"> Recibidor dallas </p>
+                    <p class="precio">$20.000 </p>                
+                    <a> <div class="container-button">
+                        <button class="button-carrito-home"><span>Ver producto</span></button>
+                     </div> </a>
+                    
                 </div>
             </div>
-        </div>
-    </section>
+          
+    </main>
 
     <footer class="pie">
         <div class="informacion">
@@ -98,9 +128,15 @@
 
             <div class="info-flex">
                 <h4>INFORMACION</h4>
-              <a href="/preguntasFrecuentes">  <p class="piePag"> Preguntas frecuentes </p> </a> 
-               <a href="/Cambios"> <p class="piePag"> Cambios y devoluciones </p></a>  
-               <a href="/envios">  <p class="piePag"> Envios </p> </a>
+                <a href="/preguntasFrecuentes">
+                    <p class="piePag"> Preguntas frecuentes </p>
+                </a>
+                <a href="/Cambios">
+                    <p class="piePag"> Cambios y devoluciones </p>
+                </a>
+                <a href="/envios">
+                    <p class="piePag"> Envios </p>
+                </a>
             </div>
 
 
@@ -108,16 +144,22 @@
 
             <div class="contacto-flex">
                 <h4>CONTACTO</h4>
-                <a href="/info">  <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p></a> 
-                <a href="/info">  <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p> </a> 
-                <a href="/info"> <p class="piePag"> <i class="far fa-envelope"></i> Email </p></a> 
+                <a href="/info">
+                    <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p>
+                </a>
+                <a href="/info">
+                    <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p>
+                </a>
+                <a href="/info">
+                    <p class="piePag"> <i class="far fa-envelope"></i> Email </p>
+                </a>
             </div>
 
 
             <div class="new-flex">
                 <h4>NEWSLETTER</h4>
                 <h6 class="newsletter"> Suscribite para recibir novedades!</h6>
-                <form  action="/" method="get">
+                <form action="/" method="get">
                     <input class="suscribite" type="email" name="email" placeholder="ejemplo@gmail.com">
                     <button class="suscrib" type="submit"> Suscribirse </button>
 
@@ -130,6 +172,9 @@
                 <a href="http://instagram.com"> <i class="fab fa-instagram"></i> </a>
             </div>
 
+        </div>
+        <div class="copyright">
+            <p> Copyright © 2022 Hangar - Home & Deco. </p>
         </div>
 
     </footer>
