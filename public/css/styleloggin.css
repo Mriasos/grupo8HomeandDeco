@@ -9,8 +9,6 @@ body{
 /*HEADER*/
 
 
-
-
 .fas.fa-shopping-basket{
     position: absolute;
     left: 95%;
@@ -71,13 +69,9 @@ body{
 }
 
 
+
 /*BODY*/
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
+
  body{
   
   align-items: center;
@@ -169,6 +163,7 @@ h2{
   .login-items{
     display: flex;
    justify-content: center;
+
      }
   .login-items i{
 height: 45px;
@@ -179,52 +174,54 @@ justify-content: center;
 color:#444;
 border: 2px solid #f7d6eb;
 border-radius: 50px;
-margin: 0  5px;
+margin: 7px  5px;
+
   }
 
 /*FOOTER*/
 
 
 footer{
-    background-color:#cdc1b3
+  background-color:#cdc1b3;
+  padding: 1px
 }
 
 .fab.fa-facebook-square, .fa-instagram{
-    align-self: center;
-    font-size: 25px;
-    margin: 5px;
-    color: black
+  align-self: center;
+  font-size: 30px;
+  margin: 5px;
+  color: black
 }
 
 
 
 
 h4{
-    font-family: "Montserrat", Sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    text-align: center;
-    margin-inline: auto;
-    text-decoration: underline;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  margin-inline: auto;
+  text-decoration: underline;
 }
 
 
 .informacion {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .redes-flex, .new-flex, .contacto-flex, .info-flex{
-    text-align:center ;
+  text-align:center ;
 }
 
 .piePag{
-    font-size: 14px;
-    color: #00000085;
+  font-size: 14px;
+  color: #00000085;
 }
 
 .suscribite{
-    font-size: 15px;
-    border-radius: 10px;
+  font-size: 15px;
+  border-radius: 10px;
 }
 
 .suscrib{
@@ -237,62 +234,89 @@ margin-top: 5px;
 }
 
 .newsletter{
-    text-align: center;
-    font-family: montserrat;
-    color: #00000085;
+  text-align: center;
+  font-family: montserrat;
+  color: #00000085;
 }
 
 a{
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover{
-    cursor: pointer;
-    text-decoration: underline gray
+  cursor: pointer;
+  text-decoration: underline gray
+}
+
+
+.copyright{
+  font-size: 10px;
 }
 
 
 @media(min-width: 576px){
 
-    .informacion{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-      height: 219px;
-    }
-    
-    .redes-flex, .new-flex, .contacto-flex, .info-flex{
-        display: flex;
-        flex-direction: column;
-        margin: 5px;
-    }
-    
-    h4{
-        text-decoration: overline;
-    }
+.linea{
+  display: block;
+}
+
+  .informacion{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      height: 206px;
+  }
+  
+  .redes-flex, .new-flex, .contacto-flex, .info-flex{
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+  }
+  
+  h4{
+      text-decoration: overline;
+  }
 
 
 .fab.fa-facebook-square, .fab.fa-instagram{
-    cursor: pointer;}
+  cursor: pointer;}
 
 .fab.fa-facebook-square:hover, .fab.fa-instagram:hover{
-    font-size: 35px;
+  font-size: 35px;
 }
 
 
 .far.fa-user-circle{
-    left: 90%
+  left: 90%
 }
 
 .burger-menu {
-    display: none;
+  display: none;
 } 
 
 .categorias{
-    display: flex;
-    justify-content:space-evenly;
-    padding: 10px;
-    font-size: 13px;
+  display: flex;
+  justify-content:space-evenly;
+  padding: 10px;
+  font-size: 13px;
 }
 
+.productos{
+  width: 30%;
+}
+
+}
+
+
+@media(min-width: 992px){
+  .productos{
+      width: 170px;
+  }
+}
+
+
+@media(min-width: 1200px){
+#imagen5{
+  display:block;
+}
 }
