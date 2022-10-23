@@ -11,109 +11,94 @@ rel="stylesheet" />
 </head>
 
 <header class="head">
-    <section class="encabezado">
-        <div class="promociones">
-            <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
-        </div>
-        <div class="logo-img">
-            <div class="logo"> <img width="100%" src="./imagenes/logoFinal.jpg" alt="HOME&DECO"> </div>
-        </div>
+    
+            <div class="promociones">
+                <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
+            </div>
+            <div class="logo-img">
+                <div class="logo"> <img  id="img-principal" width="100%" src="./imagenes/logo-header.jpg" alt="HOME&DECO"> </div>
+            </div>
 
-        <div class="carrito_login"> <i class="fas fa-shopping-basket"></i> </div>
-        <div class="user"> <i class="far fa-user-circle"></i> </div>
-
-        <!-- BARRA BUSQUEDA -->
-
-        <div class="flexsearch">
-
-            <form class="flexsearch--form" action="#" method="post">
-                <div class="flexsearch--input-wrapper">
-                    <input class="flexsearch--input" type="search" placeholder="Buscar productos">
-                </div>
-                <input class="flexsearch--submit" type="submit" value="&#10140;" />
-            </form>
-
-        </div>
-        <nav class="categorias">
-            <a href="/"> Living </a>
-
-            <a href="/"> Cocina </a>
-
-            <a href="/"> Dormitorio </a>
-
-            <a href="/"> Exterior </a>
-
-            <a href="/"> Contacto </a>
-        </nav>
-
-
-    </section>
-
+            <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a>  </div>
+            <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i>  </a> </div>
 </header>
 <body>
     <div class="container">
         
     <form method="post" action=" /contacto"> 
-        <div>
-            <label></label><br>
-            <h5>Inicie sesiòn</h5>   
-    <input class="controls" type="text" name="usuario" value=""placeholder="Usuario">
-    <input class="controls" type="password" name="contraseña" value=""placeholder="Contraseña">
-    <input class="buttons" type="submit" name="" value="Ingresar">
+                   
+            <h2>Inicie sesiòn</h2>   
+            <div class="form-body">
+            <i class= "fas fa-user"></i>
+            <input class="controls" type="text" placeholder="Usuario">
+            </div>
+            <div class="form-body">
+            <i class= "fas fa-lock"></i> 
+    <input class="controls" type="password" value= ""placeholder="Contraseña">
+</div> 
+<div class="form-body">
+    <input class="buttons"  type="submit" Value="Ingresar">
+</div>
+</div>
+       
+               <div class="contra">
+               <a href="#">¿Olvido su contraseña?</a> 
+               </div>
+            
+    
+    <div class="login"> <br>
+        <h2>Ingrese con red social</h2> <br>
+    </div>  
+        <div class="login-items">
+          <a href="#"class="fb"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="correo"><i class="fas fa-envelope-square"></i></a><br>
+        </div>
+        </div>
+    </form>
+</body><br>
+         <footer class="pie">
+        <div class="informacion">
+
+
+            <div class="info-flex">
+                <h4>INFORMACION</h4>
+              <a href="/preguntasFrecuentes">  <p class="piePag"> Preguntas frecuentes </p> </a> 
+               <a href="/Cambios"> <p class="piePag"> Cambios y devoluciones </p></a>  
+               <a href="/envios">  <p class="piePag"> Envios </p> </a>
+            </div>
+
+
+
+
+            <div class="contacto-flex">
+                <h4>CONTACTO</h4>
+                <a href="/info">  <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p></a> 
+                <a href="/info">  <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p> </a> 
+                <a href="/info"> <p class="piePag"> <i class="far fa-envelope"></i> Email </p></a> 
+            </div>
+
+
+            <div class="new-flex">
+                <h4>NEWSLETTER</h4>
+                <h6 class="newsletter"> Suscribite para recibir novedades!</h6>
+                <form  action="/" method="get">
+                    <input class="suscribite" type="email" name="email" placeholder="ejemplo@gmail.com">
+                    <button class="suscrib" type="submit"> Suscribirse </button>
+
+                </form>
+            </div>
+
+            <div class="redes-flex">
+                <h4>NUESTRAS REDES</h4>
+                <a href="http://facebook.com"> <i class="fab fa-facebook-square"></i> </a>
+                <a href="http://instagram.com"> <i class="fab fa-instagram"></i> </a>
+            </div>
 
         </div>
-               <a href="#">¿Olvido su contraseña?</a> <div>
-           
-    </form>
-    <div class="login">
-        <h2>Ingrese con red social</h2>
-        <div class="login-items">
-          <button class="fb"><i class="fab fa-facebook"></i></button>
-          <button class="tw"><i class="fab fa-twitter"></i></button>
-          <button class="correo"><i class="fas fa-envelope-square"></i></button>
-        </div>
-        </div>
-        <footer class="pie">
-            <div class="informacion">
-    
-    
-                <div class="info-flex">
-                    <h4>INFORMACION</h4>
-                    <p class="piePag"> Preguntas frecuentes </p>
-                    <p class="piePag"> Cambios y devoluciones </p>
-                    <p class="piePag"> Envios </p>
-                </div>
-    
-    
-    
-    
-                <div class="contacto-flex">
-                    <h4>CONTACTO</h4>
-                    <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p>
-                    <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p>
-                    <p class="piePag"> <i class="far fa-envelope"></i> Email </p>
-                </div>
-    
-    
-                <div class="new-flex">
-                    <h4>NEWSLETTER</h4>
-                    <h6> Suscribite para recibir alertas</h6>
-                    <form class="suscribite" action="/" method="get">
-                        <input type="email" name="email" placeholder="ejemplo@gmail.com">
-                        <button type="submit"> Suscribirse </button>
-    
-                    </form>
-                </div>
-    
-    
-                <div class="redes-flex">
-                    <h4>NUESTRAS REDES</h4>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram"></i>
-                </div>
-    
-            </div>
-    
-        </footer>
+
+    </footer>
+
 </body>
+
 </html>
