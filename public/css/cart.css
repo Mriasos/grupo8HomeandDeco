@@ -148,11 +148,7 @@ table{
 }
 
 /*MOBILE*/ 
-@media (max-width: 361px) {
+@media(min-width: 576px){
 
-}
-
-
-/*TABLET*/
-@media (max-width: 769px) {
+ 
 }
