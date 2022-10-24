@@ -148,7 +148,7 @@ a:hover{
 
 /*FORMULARIO REGISTRO*/
 .registro{
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     border-radius: 20px;
     box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
@@ -159,6 +159,7 @@ a:hover{
     align-items: center;
     justify-content: space-around;
     height: 450px;
+    margin-bottom: 20px
 }
 .form_input{
     width: 100%;
@@ -206,7 +207,8 @@ form #Contraseña{
     border: none;
     outline: none;
     font-size: 1em;
-   
+    margin-bottom: 19px;
+    margin-top: 19px;
 }
 @media(min-width: 576px){
 
