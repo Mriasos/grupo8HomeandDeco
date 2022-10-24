@@ -1,4 +1,5 @@
-# HOME&DECO
+# HANGAR - Home & Deco
+
 
 ## Descripcion del Proyecto
 
