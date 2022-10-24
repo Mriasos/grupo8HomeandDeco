@@ -4,6 +4,7 @@
     margin-top: 100px;
     margin-block-end: 10px;
     background-color: #f7d6eb;
+    box-shadow: 0em 0 0.4em olive;
 }
 
 #tabla>tbody>tr> th{
@@ -21,6 +22,7 @@ background-color:  #e2725b84 ;
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    box-shadow: 0em 0 0.3em olive;
  
 }
 
@@ -36,6 +38,7 @@ background-color:  #e2725b84 ;
     border: 0px;
     padding: 5px;
     border-radius: 10px;
+    box-shadow: 0em 0 0.3em olive;
 }
 
 #refresh-cart{
@@ -45,6 +48,7 @@ background-color:  #e2725b84 ;
     padding: 5px;
     border-radius: 5px;
     width: 80%;
+    box-shadow: 0em 0 0.3em olive;
 
 }
 
@@ -56,7 +60,7 @@ background-color:  #e2725b84 ;
     margin: auto;
     margin-top: 80px;
     margin-block-end: 80px;
-
+    box-shadow: 0em 0 0.4em olive;
 
 }
 
@@ -105,8 +109,9 @@ justify-content: space-around;
     flex-direction: column;
     justify-content: space-around;
     background-color: #f7d6eb;
-    height: 100px;
+    height: 165px;
     margin: 2px;
+    
 }
 
 #regalo>div> button{
@@ -116,6 +121,7 @@ justify-content: space-around;
     padding: 5px;
     margin: 10px;
     transition: .3s ease all;
+    box-shadow: 0em 0 0.3em olive;
 
 }
 
@@ -148,7 +154,26 @@ table{
 }
 
 /*MOBILE*/ 
-@media(min-width: 576px){
+@media(min-width: 576px) {
 
- 
+#regalo{
+    padding: 15px;
+}
+ #regalo> div{
+    margin-top: 6px;
+ }
+
+ #refresh-cart> i{
+   width: 75px;
+   margin-left: 80px;
+ }
+
+/*/.pie{
+    width: 612px;
+} 
+
+.head{
+    width: 615px;
+}
+
 }
