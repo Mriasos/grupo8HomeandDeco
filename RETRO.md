@@ -1,4 +1,4 @@
-#RETROSPECTIVA
+# RETROSPECTIVA
 
 
 **SPRINT 1***: Un buen comienzo. Nos sirvió para conocernos y compartir nuestros conocimientos para poder dividirnos las tareas. Propusimos tener una reunión semanal fija para ir actualizandonos lo que ibamos haciendo y ayudarnos con dudas. Nos dividimos el armado del wireframe y acordamos cual iba a ser la estética e idea del market.
