@@ -10,20 +10,26 @@ app.listen(puerto, ()=> {
     console.log('iniciando')
 });
 
-app.get('/', (req, res)=>{
-    res.sendFile(path.resolve('views/home.html'))
-})
 
-app.get('/loggin', (req, res)=>{
-    res.sendFile(path.resolve('views/loggin.html'))
-})
+const homeRouter = require('./routers/homeRouter')
 
-app.get('/cart', (req, res)=>{
-    res.sendFile(path.resolve('views/cart.html'))
-})
-app.get('/register', (req, res)=>{
-    res.sendFile(path.resolve('views/register.html'))
-})
-app.get('/product', (req, res)=>{
-    res.sendFile(path.resolve('views/product.html'))
-})
+app.use(homeRouter)
+
+
+const cartRouter = require('./routers/cartRouter')
+
+app.use(cartRouter)
+
+const logginRouter = require('./routers/logginRouter')
+
+app.use(logginRouter)
+
+const productRouter = require('./routers/productRouter')
+
+app.use(productRouter)
+
+const registerRouter = require('./routers/registerRouter')
+
+app.use(registerRouter)
+
+app.set('view engine', 'ejs')
