@@ -64,7 +64,7 @@ background-color:  #e2725b84 ;
 
 }
 
-#total{
+ #total{
     background-color:#e2725b84;
     padding: 15px;
     border-radius: 5px;
@@ -167,13 +167,5 @@ table{
    width: 75px;
    margin-left: 80px;
  }
-
-/*/.pie{
-    width: 612px;
-} 
-
-.head{
-    width: 615px;
 }
 
-}

@@ -11,24 +11,24 @@ app.listen(puerto, ()=> {
 });
 
 
-const homeRouter = require('./routers/homeRouter')
+const homeRouter = require('./src/routers/homeRouter')
 
 app.use(homeRouter)
 
 
-const cartRouter = require('./routers/cartRouter')
+const cartRouter = require('./src/routers/cartRouter')
 
 app.use(cartRouter)
 
-const logginRouter = require('./routers/logginRouter')
+const logginRouter = require('./src/routers/logginRouter')
 
 app.use(logginRouter)
 
-const productRouter = require('./routers/productRouter')
+const productRouter = require('./src/routers/productRouter')
 
 app.use(productRouter)
 
-const registerRouter = require('./routers/registerRouter')
+const registerRouter = require('./src/routers/registerRouter')
 
 app.use(registerRouter)
 

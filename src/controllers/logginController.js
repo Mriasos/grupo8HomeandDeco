@@ -1,7 +1,7 @@
 const path = require('path');
 
 const renderLoggin = (req, res) => {
-    return res.sendFile(path.resolve('views/loggin.html'))
+    return res.render(path.resolve('src/views/user/loggin.ejs'))
 }
 
 module.exports= {renderLoggin}

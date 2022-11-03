@@ -1,7 +1,8 @@
 const path = require('path');
 
 const renderCart = (req, res) => {
-    return res.sendFile(path.resolve('views/cart.html'))
+  return res.render(path.resolve('src/views/cart.ejs')) 
+  
 }
 
 module.exports= {renderCart}

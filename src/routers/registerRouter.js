@@ -1,7 +1,7 @@
 let express = require('express')
 let router = express.Router()
 
-const registerController = require ('../controllers/registerController')
+const registerController = require ('../../../src/controllers/registerController')
 
 router.get('/register', registerController.renderRegister)
 
