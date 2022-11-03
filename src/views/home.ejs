@@ -1,63 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css\style.css">
-    <title>HANGAR</title>
-</head>
+    <head>
+        <%- include ('./partials/head.ejs') %>
+        <link rel="stylesheet" href="css/style.css">
+        <title>HANGAR</title>
+    </head>
 
 <body>
-    <header class="head">
-
-        <div class="promociones">
-            <p>3 y 6 cuotas sin interes - 10% de descuento con transferencia</p>
-        </div>
-        <div class="logo-img">
-            <div class="logo"> <a href="/"><img id="img-principal" width="100%" src="./imagenes/logo-header.jpg" alt="HOME&DECO"></a>
-            </div>
-        </div>
-
-        <div class="carrito_login"> <a href="/cart"><i class="fas fa-shopping-basket"></i></a> </div>
-        <div class="user"> <a href="/loggin"> <i class="far fa-user-circle"></i> </a> </div>
-        <div class="registro-home"> <a href="/register"> <i class="far fa-address-card"></i> </a> </div>
-        <!-- BARRA BUSQUEDA -->
-
-        <div class="flexsearch">
-
-            <form class="flexsearch--form" action="#" method="post">
-                <div class="flexsearch--input-wrapper">
-                    <input class="flexsearch--input" type="search" placeholder="Buscar productos">
-                </div>
-                <input class="flexsearch--submit" type="submit" value="&#10140;" />
-            </form>
-
-        </div>
-        <nav class="categorias">
-            <a href="/"> Living </a>
-
-            <a href="/"> Cocina </a>
-
-            <a href="/"> Dormitorio </a>
-
-            <a href="/"> Exterior </a>
-
-            <a href="/"> Contacto </a>
-        </nav>
-        <!-- MENU BURGER -->
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
-
-
-    </header>
-
+    <%- include ('./partials/header.ejs') %>
     <main>
         <div class="imagen-principal-main">
                 <img class="imagen-main" src="./imagenes/IMAGEN-PORTADA.jpg" />
@@ -130,62 +81,7 @@
 
     </main>
 
-    <footer class="pie">
-        <div class="informacion">
-
-
-            <div class="info-flex">
-                <h4>INFORMACION</h4>
-                <a href="/preguntasFrecuentes">
-                    <p class="piePag"> Preguntas frecuentes </p>
-                </a>
-                <a href="/Cambios">
-                    <p class="piePag"> Cambios y devoluciones </p>
-                </a>
-                <a href="/envios">
-                    <p class="piePag"> Envios </p>
-                </a>
-            </div>
-
-
-
-
-            <div class="contacto-flex">
-                <h4>CONTACTO</h4>
-                <a href="/info">
-                    <p class="piePag"><i class="fas fa-map-marker-alt"></i> Ubicacion </p>
-                </a>
-                <a href="/info">
-                    <p class="piePag"> <i class="fab fa-whatsapp"></i> Telefono </p>
-                </a>
-                <a href="/info">
-                    <p class="piePag"> <i class="far fa-envelope"></i> Email </p>
-                </a>
-            </div>
-
-
-            <div class="new-flex">
-                <h4>NEWSLETTER</h4>
-                <h6 class="newsletter"> Suscribite para recibir novedades!</h6>
-                <form action="/" method="get">
-                    <input class="suscribite" type="email" name="email" placeholder="ejemplo@gmail.com">
-                    <button class="suscrib" type="submit"> Suscribirse </button>
-
-                </form>
-            </div>
-
-            <div class="redes-flex">
-                <h4>NUESTRAS REDES</h4>
-                <a href="http://facebook.com"> <i class="fab fa-facebook-square"></i> </a>
-                <a href="http://instagram.com"> <i class="fab fa-instagram"></i> </a>
-            </div>
-
-        </div>
-        <div class="copyright">
-            <p> Copyright © 2022 Hangar - Home & Deco. </p>
-        </div>
-
-    </footer>
+    <%- include ('./partials/footer.ejs') %>
 
 </body>
 

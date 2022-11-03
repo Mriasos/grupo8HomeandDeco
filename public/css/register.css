@@ -1,151 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&family=Roboto:wght@300;700&display=swap");
-
-body {
-  font-family: "Montserrat", Sans-serif;
-  margin: 0%;
+.categorias{
+  display: none;
 }
-/*HEADER*/
-
-.fas.fa-shopping-basket{
-  position: absolute;
-  left: 95%;
-  top: 57px;
-}
-
-.far.fa-user-circle{
-  position: absolute;
-  left: 86%;
-  top: 57px;
-  cursor: pointer;
-}
-
-.far.fa-address-card{
-  position: absolute;
-  left: 77%;
-  top: 57px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.fas.fa-shopping-basket:hover, .far.fa-user-circle:hover, .far.fa-address-card:hover  {
-  font-size: 25px;
-}
-
-
-.promociones{
-  background-color: antiquewhite;
-  text-align: center;
-  font-family: "Montserrat", Sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 1.5px;
-  margin: 0px;
-}
-
-.logo-img{
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.logo-img .logo{
-  width: 25%;
-  height: 10%;
-  }
-
-
-.flexsearch--form{
-  display: flex;
-  justify-content: center;
-  
-}
-.flexsearch--input, .flexsearch--submit{
-  background-color: #FFFDD0; 
-  border: none;
-  background: transparent;
-  border-bottom: 1px solid rgba(67,67,67,0.3);
-  
-}
-
-.flexsearch--input{
-  width: 30vw;
-}
-
-
-
-/*FOOTER*/
-footer{
-  background-color:#cdc1b3;
-  padding: 1px
-}
-
-.fab.fa-facebook-square, .fa-instagram{
-  align-self: center;
-  font-size: 30px;
-  margin: 5px;
-  color: black
-}
-
-
-
-
-h4{
-  font-family: "Montserrat", Sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  text-align: center;
-  margin-inline: auto;
-  text-decoration: underline;
-}
-
-
-.informacion {
-  flex-direction: column;
-}
-
-.redes-flex, .new-flex, .contacto-flex, .info-flex{
-  text-align:center ;
-}
-
-.piePag{
-  font-size: 14px;
-  color: #00000085;
-}
-
-.suscribite{
-  font-size: 15px;
-  border-radius: 10px;
-}
-
-.suscrib{
-background-color: #D8AF8C;
-border-radius: 5px;
-color: white;
-cursor: pointer;
-font-size: 15px;
-margin-top: 5px;
-}
-
-.newsletter{
-  text-align: center;
-  font-family: montserrat;
-  color: #00000085;
-}
-
-a{
-  text-decoration: none;
-}
-
-a:hover{
-  cursor: pointer;
-  text-decoration: underline gray
-}
-
-
-.copyright{
-  font-size: 10px;
-}
-
 /*FORMULARIO REGISTRO*/
 .registro{
     width: 100%;
@@ -159,7 +14,8 @@ a:hover{
     align-items: center;
     justify-content: space-around;
     height: 450px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    margin-top: 20px
 }
 .form_input{
     width: 100%;
@@ -216,50 +72,6 @@ form #Contraseña{
       display: block;
   }
   
-      .informacion{
-          display: flex;
-          justify-content: space-around;
-          flex-direction: row;
-          height: 206px;
-      }
-      
-      .redes-flex, .new-flex, .contacto-flex, .info-flex{
-          display: flex;
-          flex-direction: column;
-          margin: 5px;
-      }
-      
-      h4{
-          text-decoration: overline;
-      }
-  
-  
-  .fab.fa-facebook-square, .fab.fa-instagram{
-      cursor: pointer;}
-  
-  .fab.fa-facebook-square:hover, .fab.fa-instagram:hover{
-      font-size: 35px;
-  }
-  
-  
-  .far.fa-user-circle{
-      left: 90%
-  }
-  
-  .far.fa-address-card{
-      left: 84%;
-  }
-  
-  .burger-menu {
-      display: none;
-  } 
-  
-  .categorias{
-      display: flex;
-      justify-content:space-evenly;
-      padding: 10px;
-      font-size: 13px;
-  }
   
   .productos{
       width: 30%;
