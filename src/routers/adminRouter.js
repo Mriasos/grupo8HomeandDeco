@@ -1,10 +1,10 @@
 let express = require('express')
-const { restart } = require('nodemon')
 let router = express.Router()
-const path = require('path');
 
-const adminController = require ('../controllers/adminControllers')
+const adminController = require('../../src/controllers/adminControllers')
 
 router.get('/createProduct', adminController.createProduct)
+router.get('/deletteProduct', adminController.deletteProduct)
 
 module.exports = router
+
