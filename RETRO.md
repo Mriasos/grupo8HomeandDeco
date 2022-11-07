@@ -7,3 +7,7 @@ Un buen comienzo. Nos sirvió para conocernos y compartir nuestros conocimientos
 ## SPRINT 2: 
 Con una buena comunicación, nos dividimos las tareas para poder acelerar los procesos y en las reuniones poder comentar sobre lo que cada uno iba haciendo. Con organización, pudimos realizar el trabajo y unificar ideas con el fin de lograr un mejor desempeño.
 En lo que respecta a los aspectos negativos que se dieron en el desarrollo de las tareas, GitHub fue el principal desafio del grupo. Tuvimos bastantes dificultades con la descarga de archivos al visual, ya que no se bajaban o se bajaban versiones que no eran las mas actualizadas. Como aspectos a mejorar, creemos que necesitamos profundizar en los conceptos que tienen que ver con las ramas, los conflictos, y las descargas de codigo desde GitHub. 
+
+## SPRINT 3:
+De acuerdo al resultado de las entregas anteriores y los conocimientos adquiridos, hemos presentado inconvenientes en separación de vistas que originaron focalizar la atención  en el ruteo y descubrir donde radicaba la falla. Dicha situacion fue autogestionada y resuelta. 
+En sprint 3, hemos podido con las herramientas que poseemos avanzar en la propia resolución de eventos.
