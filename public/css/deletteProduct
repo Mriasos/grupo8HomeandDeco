@@ -1,5 +1,5 @@
 
-form{
+/*form{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -7,14 +7,14 @@ form{
     margin-top: 50px;
     margin-bottom: 50px;
     }
-
+*/
 button{
     width: 100px;
     align-self: center;
     margin: 10px;
 }
 
-.name, .description, .price, .img-product, .category, .product-color{
+.name, .description, .price, .img-product, .category, .product-color, .product-tam{
     margin: 10px;
     padding: 5px;
     display: flex;
@@ -52,7 +52,7 @@ button:hover{
     color:rgb(82, 78, 78)
 }
 
-#categoria, #descripcion, #nombre, #precio{
+#categoria, #descripcion, #nombre, #precio, #tamanio{
     padding: 10px;
     border: none;
     border-radius: 5px;
