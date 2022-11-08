@@ -1,5 +1,5 @@
 
-/*form{
+.eliminar-producto{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -7,14 +7,10 @@
     margin-top: 50px;
     margin-bottom: 50px;
     }
-*/
-button{
-    width: 100px;
-    align-self: center;
-    margin: 10px;
-}
 
-.name, .description, .price, .img-product, .category, .product-color, .product-tam{
+
+
+.name, .description, .price, .img-eliminar-product, .category, .product-color, .product-tam{
     margin: 10px;
     padding: 5px;
     display: flex;
@@ -33,7 +29,10 @@ button{
     margin-top: 20px
 }
 
-button{
+.delette{
+    width: 100px;
+    align-self: center;
+    margin: 10px;
     padding: 8px;
     width: 80%;
     letter-spacing: 3px;
@@ -44,8 +43,8 @@ button{
     color: rgb(82, 78, 78);
     background-color:  #f6becf;
     color: white;
-    
 }
+
 
 button:hover{
     background-color: #FFFDD0;

@@ -3,7 +3,7 @@
 <head>
     
     <%- include ('../partials/head.ejs') %>
-    <link rel="stylesheet" href="/css/createproduct.css">
+    <link rel="stylesheet" href="/css/deletteProduct.css">
     <title>HANGAR</title>
 
 </head> 
@@ -11,7 +11,7 @@
     <%- include ('../partials/header.ejs') %>
         
     <section class="container">
-        <form class = "cargar-producto">
+        <form class = "eliminar-producto">
         <div class =" encabezado">
             <h1>Eliminar / Modificar Producto</h1>
         </div>
@@ -23,7 +23,7 @@
             <label for="descripcion">Descripcion del producto</label> 
             <textarea id="descripcion" type="text" > </textarea>
         </div>
-        <div class = "img-product">
+        <div class = "img-eliminar-product">
             <label for="imagen">Imagen del producto</label> 
             <input id="imagen" type="file" >
         </div>
@@ -48,7 +48,7 @@
             <label for="precio">Precio del producto</label> 
             <input id="precio" type="number" >
         </div>
-        <button>ELIMINAR / MODIFICAR</button>
+        <button class="delette">ELIMINAR / MODIFICAR</button>
 
         </form>
     </section>

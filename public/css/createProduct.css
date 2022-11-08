@@ -1,5 +1,5 @@
 
-form{
+.cargar-producto{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -8,13 +8,23 @@ form{
     margin-bottom: 50px;
     }
 
-button{
+.button-create{
     width: 100px;
     align-self: center;
     margin: 10px;
+    padding: 8px;
+    width: 80%;
+    letter-spacing: 3px;
+    border-radius: 35px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: rgb(82, 78, 78);
+    background-color:  #f6becf;
+    color: white;
 }
 
-.name, .description, .price, .img-product, .category, .product-color, .product-tam{
+.name, .description, .price, .img-cargar-product, .category, .product-color, .product-tam{
     margin: 10px;
     padding: 5px;
     display: flex;
@@ -31,20 +41,6 @@ button{
     background-color:rgb(250, 235, 215);
     margin-bottom: 20px;
     margin-top: 20px
-}
-
-button{
-    padding: 8px;
-    width: 80%;
-    letter-spacing: 3px;
-    border-radius: 35px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    color: rgb(82, 78, 78);
-    background-color:  #f6becf;
-    color: white;
-    
 }
 
 button:hover{

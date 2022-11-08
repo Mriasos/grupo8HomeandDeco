@@ -7,9 +7,6 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
-const adminRouter = require('./src/routers/adminRouter')
-
-app.use('/admin',adminRouter)
 
 const puerto = 3000;
 app.listen(puerto, ()=> {
@@ -39,6 +36,9 @@ const registerRouter = require('./src/routers/registerRouter')
 
 app.use(registerRouter)
 
+const adminRouter = require('./src/routers/adminRouter')
+
+app.use('/admin',adminRouter)
 
 
 
