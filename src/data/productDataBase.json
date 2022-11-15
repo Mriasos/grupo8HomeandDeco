@@ -1,46 +1,50 @@
  [{
     "id": 1,
-    "name": "Lampara atenas",
-    "description": "",
+    "name": "Lampara Atenas",
+    "description": "Lámpara realizada con técnica tradicional y artesanal",
     "image": "Lampara1.jpg",
     "category": "Visited",
     "color": "Beige",
-    "price": "20000",
+    "price": "5000",
     "discount": "10"
 },
 {
     "id": 2,
-    "name": "",
+    "name": "Llavero Cloe",
     "description": "Llavero Cloe",
-    "image": "LLAVERO.jpg",
+    "image": "llavero.jpeg",
     "category": "Visited",
-    "color": "Beige",
-    "price": "20000"
+    "color": "?",
+    "price": "2500",
+    "discount": "10"
 },
  {
     "id": 3,
-    "name": "Lampara tokio",
-    "description": "Lampara de techo",
-    "image": "Lampara1.jpg",
+    "name": "Bandeja Iris",
+    "description": "Bandeja Iris",
+    "image": "bandeja.jpeg",
     "category": "Visited",
-    "color": "Beige",
-    "price": "20000"
+    "color": "?",
+    "price": "1800",
+    "discount": "10"
 },
 {
     "id": 4,
-    "name": "Lampara tokio",
-    "description": "Lampara de techo",
-    "image": "Lampara1.jpg",
+    "name": "Manta Pompeya",
+    "description": "Cubre cama",
+    "image": "cubrecama.jpeg",
     "category": "Visited",
-    "color": "Beige",
-    "price": "20000"
+    "color": "?",
+    "price": "20000",
+    "discount": "10"
 },
 {
     "id": 5,
-    "name": "Lampara tokio",
-    "description": "Lampara de techo",
-    "image": "Lampara1.jpg",
+    "name": "Recibidor Dallas",
+    "description": "Recibidor Dallas",
+    "image": "recibidor.jpeg",
     "category": "Visited",
-    "color": "Beige",
-    "price": "20000"
+    "color": "?",
+    "price": "20000",
+    "discount": "10"
 }]
