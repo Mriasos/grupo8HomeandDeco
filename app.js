@@ -7,6 +7,8 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
 
 const puerto = 3000;
 app.listen(puerto, ()=> {
@@ -17,29 +19,24 @@ app.listen(puerto, ()=> {
 
 const homeRouter = require('./src/routers/homeRouter')
 
-app.use(homeRouter)
-
+app.use('/',homeRouter)
 
 const cartRouter = require('./src/routers/cartRouter')
 
-app.use(cartRouter)
+app.use('/cart',cartRouter)
 
-const logginRouter = require('./src/routers/logginRouter')
+const authRouter = require('./src/routers/authRouter')
 
-app.use(logginRouter)
+app.use('/auth', authRouter)
 
 const productRouter = require('./src/routers/productRouter')
 
-app.use(productRouter)
+app.use('/product',productRouter)
 
-const registerRouter = require('./src/routers/registerRouter')
-
-app.use(registerRouter)
 
 const adminRouter = require('./src/routers/adminRouter')
 
 app.use('/admin',adminRouter)
-
 
 
 

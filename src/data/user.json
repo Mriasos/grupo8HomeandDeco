@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "firstName": "Juan Pablo",
+        "lastName": "Paillet",
+        "email": "juanpablo25@gmail.com",
+        "password": "juanpablito",
+        "category": "",
+        "image": ""
+    },
+    {
+        "id": 1,
+        "firstName": "Natalia",
+        "lastName": "Krivanek",
+        "email": "natikrivanek@gmail.com",
+        "password": "natilomas",
+        "category": "",
+        "image": ""
+    },
+    {
+        "id": 1,
+        "firstName": "Ximena",
+        "lastName": "camacho",
+        "email": "ximecamacho@gmail.com",
+        "password": "ximekpa",
+        "category": "",
+        "image": ""
+    }
+]

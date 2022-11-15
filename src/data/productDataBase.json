@@ -1,0 +1,46 @@
+ [{
+    "id": 1,
+    "name": "Lampara atenas",
+    "description": "",
+    "image": "Lampara1.jpg",
+    "category": "Visited",
+    "color": "Beige",
+    "price": "20000",
+    "discount": "10"
+},
+{
+    "id": 2,
+    "name": "",
+    "description": "Llavero Cloe",
+    "image": "LLAVERO.jpg",
+    "category": "Visited",
+    "color": "Beige",
+    "price": "20000"
+},
+ {
+    "id": 3,
+    "name": "Lampara tokio",
+    "description": "Lampara de techo",
+    "image": "Lampara1.jpg",
+    "category": "Visited",
+    "color": "Beige",
+    "price": "20000"
+},
+{
+    "id": 4,
+    "name": "Lampara tokio",
+    "description": "Lampara de techo",
+    "image": "Lampara1.jpg",
+    "category": "Visited",
+    "color": "Beige",
+    "price": "20000"
+},
+{
+    "id": 5,
+    "name": "Lampara tokio",
+    "description": "Lampara de techo",
+    "image": "Lampara1.jpg",
+    "category": "Visited",
+    "color": "Beige",
+    "price": "20000"
+}]
