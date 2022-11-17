@@ -16,7 +16,13 @@ const controller = {
 
 	// detalle de un producto
 	detail: (req, res) => {
-		res.render('detail');
+		const productId = req.params.productId
+		const productToFind = products.find((product) => product.id == productId)
+		if(productToFind == undefined){
+			return res.send('No se encontro el producto buscado')
+		}
+		return res.render("detail", {productToEdit: productToFind })
+
 	},
 
 	// Crear - Form de creacion de un producto
@@ -37,12 +43,21 @@ const controller = {
 
 	// Actualizar - Form para editar
 	edit: (req, res) => {
-		res.render('detail');
+		detail: (req, res) => {
+			const productId = req.params.productId
+			const productToFind = products.find((product) => product.id == productId)
+			if(productToFind == undefined){
+				return res.send('No se encontro el producto buscado')
+			}
+			return res.render("editProduct", {productToEdit: productToFind })
+	
+			
+		};
 	},
 
 	// Actualizar un producto
 	update: (req, res) => {
-		// Do the magic
+		
 	},
 
 	// Eliminar un producto

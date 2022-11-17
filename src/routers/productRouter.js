@@ -14,10 +14,10 @@ router.post('/', productsController.store);
 
 
 /*** ACTUALIZAR UN PRODUCTO ***/ 
-/***router.get('/:id/', productsController.detail); 
+/***router.get('/detail/:productId/', productsController.detail); 
 
 /*** EDITAR UN PRODUCTO ***/ 
-/***router.get('/:id/edit', productsController.edit); 
+/***router.get('/edit/:productId/', productsController.edit); 
 router.put('/:id', productsController.update); 
 
 

@@ -5,7 +5,7 @@ const createProduct = (req, res) => {
   
 }
 const deletteProduct = (req, res) => {
-  return res.render(path.resolve('src/views/admin/deletteProduct.ejs')) 
+  return res.render(path.resolve('src/views/admin/editProduct.ejs')) 
   
 }
 module.exports= {createProduct, deletteProduct}

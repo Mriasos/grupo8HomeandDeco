@@ -13,7 +13,7 @@
     "name": "Llavero Cloe",
     "description": "Llavero Cloe",
     "image": "llavero.jpeg",
-    "category": "Visited",
+    "category": "in sale",
     "color": "?",
     "price": "2500",
     "discount": "10"
@@ -23,7 +23,7 @@
     "name": "Bandeja Iris",
     "description": "Bandeja Iris",
     "image": "bandeja.jpeg",
-    "category": "Visited",
+    "category": "in sale",
     "color": "?",
     "price": "1800",
     "discount": "10"
@@ -43,7 +43,7 @@
     "name": "Recibidor Dallas",
     "description": "Recibidor Dallas",
     "image": "recibidor.jpeg",
-    "category": "Visited",
+    "category": "in sale",
     "color": "?",
     "price": "20000",
     "discount": "10"
