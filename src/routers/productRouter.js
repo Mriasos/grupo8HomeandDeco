@@ -5,8 +5,9 @@ const productController = require ('../../src/controllers/productController')
 
 router.get('/', productController.renderProduct)
 
-/*** TODAS LOS PRODUCTOS ***/ 
-/***router.get('/', productController.index); 
+/*GET- detalle de un producto en particular */ 
+router.get('/', productController.index) 
+router.get('/search', productController.search); 
 
 /*** CREAR UN PRODUCTO ***/ 
 /***router.get('/create/', productsController.create); 

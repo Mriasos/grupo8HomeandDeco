@@ -7,7 +7,8 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
-app.use(express.urlencoded({extended: false}))
+//Middlewares
+app.use(express.urlencoded({extended: false}));
 app.use(express.json())
 
 const puerto = 3000;
@@ -16,7 +17,7 @@ app.listen(puerto, ()=> {
 });
 
 
-
+//Routes
 const homeRouter = require('./src/routers/homeRouter')
 
 app.use('/',homeRouter)
@@ -29,7 +30,7 @@ const authRouter = require('./src/routers/authRouter')
 
 app.use('/auth', authRouter)
 
-const productRouter = require('./src/routers/productRouter')
+const productRouter= require('./src/routers/productRouter')
 
 app.use('/product',productRouter)
 

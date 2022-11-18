@@ -11,8 +11,22 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	// listado de todos los productos
 	index: (req, res) => {
-		res.render('productList');
-	},
+		//res.render('productList');
+		//filtrar por visitados
+		const visitedProducts = products.filter (product => product.category=="visited");
+		const insaleProducts = products.filter (product => product.category=="in-sale");
+
+		//Devolver datos a la vista
+		const viewData = {
+			visitedProducts,
+			insaleProducts
+
+
+		}
+		
+		//Devolver vista con los datos
+		res.render ('detail', viewData);
+	}, 
 
 	// detalle de un producto
 	detail: (req, res) => {

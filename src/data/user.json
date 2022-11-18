@@ -3,27 +3,48 @@
         "id": 1,
         "firstName": "Juan Pablo",
         "lastName": "Paillet",
-        "email": "juanpablo25@gmail.com",
+        "email": "jpablo25@gmail.com",
         "password": "juanpablito",
-        "category": "",
+        "category": "administrador",
         "image": ""
     },
     {
         "id": 2,
         "firstName": "Natalia",
         "lastName": "Krivanek",
-        "email": "natikrivanek@gmail.com",
+        "email": "nati@gmail.com",
         "password": "natilomas",
-        "category": "",
+        "category": "cliente",
         "image": ""
     },
     {
         "id": 3,
         "firstName": "Ximena",
-        "lastName": "camacho",
-        "email": "ximecamacho@gmail.com",
-        "password": "ximekpa",
-        "category": "",
+        "lastName": "Camco",
+        "email": "xime@gmail.com",
+        "password": "EAiYLgLoKGn",
+        "category": "mayorista",
         "image": ""
-    }
+    },
+
+    {
+        "id": 4,
+        "firstName": "Wilone",
+        "lastName": "Elsip",
+        "email": "welsip3@usatoday.com",
+        "password": "svtLolA73",
+        "category": "administrador",
+        "image": ""
+    },
+    {
+
+        "id": 5,
+        "firstName": "Suzanna",
+        "lastName": "Kaindl",
+        "email": "skaindl0@discovery.com",
+        "password": "wSQcucn1s",
+        "category": "cliente",
+        "image": ""
+}
+
 ]
