@@ -7,9 +7,13 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', './views')
 
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+
+
 //Middlewares
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false})); //Para poder trabajar con los datos del JSON
 app.use(express.json())
+app.use(methodOverride('_method'))//Para poder utilizar metodo PUT/PATH/DELETE
 
 const puerto = 3000;
 app.listen(puerto, ()=> {
@@ -35,9 +39,7 @@ const productRouter= require('./src/routers/productRouter')
 app.use('/product', productRouter)
 
 
-//const adminRouter = require('./src/routers/adminRouter')
 
-//app.use('/admin',adminRouter)
 
 
 

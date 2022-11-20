@@ -13,7 +13,7 @@
     <%- include ('./partials/header.ejs') %>
 
         <section class="container">
-            <form class="eliminar-producto" action="/product/edit/<%= productToFind.id %>" method="post">
+            <form class="eliminar-producto" action="/product/<%= productToFind.id %>?_method=put" method="post">
                 <div class=" encabezado">
                     <h1>Eliminar / Modificar Producto</h1>
                 </div>
@@ -31,14 +31,36 @@
                     <input id="imagen" type="file">
                 </div>
                 <div class="category">
-                    <label for="categoria">Categorias del producto</label>
-                    <input id="categoria" type="text">
+                    <label for="category" class="form-label">Categoría:</label>
+                    <select name="category" id="category" class="form-input">
+                        <option value="">Elegí</option>  
+                                <option 
+                                <% if(productToFind.category == 'in-sale') {%>
+                                    selected
+                                    <% } %> 
+                                
+                                value="in-sale" >En oferta</option>
+            
+                        <option>                                               
+                        <option 
+                        <% if(productToFind.category == 'visited') {%>
+                            selected
+                            <% } %>
+                        
+                        value="visited" >Últimos visitados</option>
+                    </select>
                 </div>
-                <div class="product-color">
+
+                <div class="discount">
+                    <label for="discount">Descuento del producto</label>
+                    <input id="discount" type="text" name="discount" value="<%= productToFind.discount %> " >
+                </div>
+                
+                <!--<div class="product-color">
                     <label for="color">Color del producto</label>
                     <input id="color" type="color">
                 </div>
-                <!--<div class = "product-tam">
+                <div class = "product-tam">
             <label for="tamanio">Tamaño</label>
             <select  class = "button-tam" name = "tamanio">
                 <option disabled="">Seleccione una Opcion</option>

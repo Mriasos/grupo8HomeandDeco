@@ -69,7 +69,23 @@ const controller = {
 
 	// Actualizar un producto
 	update: (req, res) => {
-		return res.render(path.resolve('src/views/editProduct.ejs'))
+		const update = req.body
+		update.price = Number(update.price)
+		update.discount= Number(update.discount)
+		
+		const productIndex = products.findIndex((product)=>{
+			return product.id == req.params.id
+		})
+		if(productIndex == -1){
+			return res.send("No existe el producto")
+		}
+		products[productIndex] = {...products[productIndex], ...update}
+
+		const jsonProduct = JSON.stringify(products)
+		fs.writeFileSync(productsFilePath, jsonProduct) 
+		
+		return res.send(products[productIndex])
+		
 	},
 
 	// Eliminar un producto
