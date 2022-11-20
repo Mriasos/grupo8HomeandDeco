@@ -4,7 +4,7 @@ let router = express.Router()
 const productController = require ('../../src/controllers/productController')
 
 
-//router.get('/', productController.renderProduct)
+
 
 /*** MOSTRAR TODOS LOS PRODUCTOS ***/ 
 router.get('/', productController.index) 

@@ -19,26 +19,31 @@
                 </div>
                 <div class="name">
                     <label for="nombre">Nombre del producto</label>
-                    <input id="nombre" type="text">
+                    <input id="nombre" type="text" name="name">
                 </div>
                 <div class="description">
                     <label for="descripcion">Descripcion del producto</label>
-                    <textarea id="descripcion" type="text"> </textarea>
+                    <textarea id="descripcion" type="text" name="description"> </textarea>
                 </div>
                 <div class="img-cargar-product">
                     <label for="imagen">Imagen del producto</label>
-                    <input id="imagen" type="file">
+                    <input id="imagen" type="file" name="image">
                 </div>
                 <div class="category">
                     <label for="categoria">Categorias del producto</label>
-                    <input id="categoria" type="text">
-                </div>
-                <div class="product-color">
-                    <label for="color">Color del producto</label>
-                    <input id="color" type="color">
+                    <input id="categoria" type="text" name="categoria">
                 </div>
 
-                <!--<div class = "product-tam">
+                <div class="discount">
+                    <label for="discount">Descuento del producto</label>
+                    <input id="discount" type="discount" name="discount">
+                </div>
+               <!--<div class="product-color">
+                    <label for="color">Color del producto</label>
+                    <input id="color" type="color" name="color">
+                </div>
+
+                <div class = "product-tam">
             <label for="tamanio">Tamaño</label>
             <select  class = "button-tam" name = "tamanio">
                 <option disabled="">Seleccione una Opcion</option>
@@ -50,7 +55,7 @@
 
                 <div class="price">
                     <label for="price">Precio del producto</label>
-                    <input id="price" type="number">
+                    <input id="price" type="number" name="price">
                 </div>
 
                 <button class="button-create">CARGAR</button>

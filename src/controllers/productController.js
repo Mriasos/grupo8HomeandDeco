@@ -1,9 +1,6 @@
 const path = require('path');
 const fs = require('fs')
 
-//const renderProduct = (req, res) => {
-  // return res.render(path.resolve('src/views/product/detail.ejs'))
-//}
 
 const productsFilePath = path.resolve('./src/data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -54,7 +51,7 @@ const controller = {
 		const jsonProduct = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, jsonProduct) 
 
-	return res.send(products)
+	return res.send(camposNuevosProductos)
 	},
 
 	// Actualizar - Form para editar

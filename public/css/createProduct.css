@@ -24,7 +24,7 @@
     color: white;
 }
 
-.name, .description, .price, .img-cargar-product, .category, .product-color, .product-tam{
+.name, .description, .price, .img-cargar-product, .category, .discount, .product-tam{
     margin: 10px;
     padding: 5px;
     display: flex;
