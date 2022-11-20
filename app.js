@@ -32,12 +32,12 @@ app.use('/auth', authRouter)
 
 const productRouter= require('./src/routers/productRouter')
 
-app.use('/product',productRouter)
+app.use('/product', productRouter)
 
 
-const adminRouter = require('./src/routers/adminRouter')
+//const adminRouter = require('./src/routers/adminRouter')
 
-app.use('/admin',adminRouter)
+//app.use('/admin',adminRouter)
 
 
 

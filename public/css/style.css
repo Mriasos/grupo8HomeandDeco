@@ -20,6 +20,17 @@
   
 }
 
+.nuestroProd{
+    color: gray;
+}
+.nuestroProd:hover{
+    cursor: pointer;
+    text-decoration: underline gray
+}
+
+
+
+
 .linea{
     align-self: center;
     margin: 15px;

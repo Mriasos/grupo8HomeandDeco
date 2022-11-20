@@ -3,26 +3,27 @@ let router = express.Router()
 
 const productController = require ('../../src/controllers/productController')
 
-router.get('/', productController.renderProduct)
 
-/*GET- detalle de un producto en particular */ 
+//router.get('/', productController.renderProduct)
+
+/*** MOSTRAR TODOS LOS PRODUCTOS ***/ 
 router.get('/', productController.index) 
-router.get('/search', productController.search); 
+//router.get('/search', productController.search); 
 
 /*** CREAR UN PRODUCTO ***/ 
-/***router.get('/create/', productsController.create); 
-router.post('/', productsController.store); 
+router.get('/create/', productController.create); 
+router.post('/', productController.store); 
 
 
 /*** ACTUALIZAR UN PRODUCTO ***/ 
-/***router.get('/detail/:productId/', productsController.detail); 
+router.get('/detail/:productId/', productController.detail); 
 
 /*** EDITAR UN PRODUCTO ***/ 
-/***router.get('/edit/:productId/', productsController.edit); 
-router.put('/:id', productsController.update); 
+router.get('/edit/:productId', productController.edit); 
+router.put('/:id', productController.update); 
 
 
-/*** ELIMINAR UN PRODUCTO
-router.delete('/:id', productsController.destroy); ***/ 
+/*** ELIMINAR UN PRODUCTO ***/
+router.delete('/:id', productController.destroy);  
 
 module.exports = router

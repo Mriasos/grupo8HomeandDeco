@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs')
 
-const renderProduct = (req, res) => {
-    return res.render(path.resolve('src/views/product/productList.ejs'))
-}
+//const renderProduct = (req, res) => {
+  // return res.render(path.resolve('src/views/product/detail.ejs'))
+//}
 
 const productsFilePath = path.resolve('./src/data/productDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -11,22 +11,24 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	// listado de todos los productos
 	index: (req, res) => {
-		//res.render('productList');
+	res.render((path.resolve('src/views/productList.ejs')), {products});
 		//filtrar por visitados
-		const visitedProducts = products.filter (product => product.category=="visited");
-		const insaleProducts = products.filter (product => product.category=="in-sale");
+		//const visitedProducts = products.filter (product => product.category=="visited");
+		//const insaleProducts = products.filter (product => product.category=="in-sale");
 
 		//Devolver datos a la vista
-		const viewData = {
-			visitedProducts,
-			insaleProducts
+		//const viewData = {
+			//visitedProducts,
+			//insaleProducts
 
 
-		}
+		//}
 		
 		//Devolver vista con los datos
-		res.render ('detail', viewData);
-	}, 
+		
+		//return res.render((path.resolve('src/views/productList.ejs')), viewData) ;
+	},
+	
 
 	// detalle de un producto
 	detail: (req, res) => {
@@ -35,13 +37,13 @@ const controller = {
 		if(productToFind == undefined){
 			return res.send('No se encontro el producto buscado')
 		}
-		return res.render("detail", {productToEdit: productToFind })
+		return res.render((path.resolve('src/views/detail.ejs')), {productToFind: productToFind })
 
 	},
 
 	// Crear - Form de creacion de un producto
 	create: (req, res) => {
-		res.render('createproduct');
+		res.render(path.resolve('src/views/createproduct.ejs'));
 	},
 	
 	// Create -  accion de creacion 
@@ -57,28 +59,27 @@ const controller = {
 
 	// Actualizar - Form para editar
 	edit: (req, res) => {
-		detail: (req, res) => {
-			const productId = req.params.productId
-			const productToFind = products.find((product) => product.id == productId)
+		const productId = req.params.productId
+		const productToFind = products.find((product) => product.id == productId)
 			if(productToFind == undefined){
 				return res.send('No se encontro el producto buscado')
 			}
-			return res.render("editProduct", {productToEdit: productToFind })
+			
+			return res.render((path.resolve('src/views/editProduct.ejs')), {productToFind: productToFind })
 	
 			
-		};
-	},
+		},
 
 	// Actualizar un producto
 	update: (req, res) => {
-		
+		return res.render(path.resolve('src/views/editProduct.ejs'))
 	},
 
 	// Eliminar un producto
 	destroy : (req, res) => {
-		
+		return res.render(path.resolve('src/views/editProduct.ejs'))
 	}
 };
 
 
-module.exports= {renderProduct}
+module.exports= controller
