@@ -88,9 +88,14 @@ const controller = {
 		
 	},
 
+
 	// Eliminar un producto
 	destroy : (req, res) => {
-		return res.render(path.resolve('src/views/editProduct.ejs'))
+		var productId = req.params.id 
+        products = products.filter(function(product){
+        return product.id !== productId
+		})
+		res.sendStatus(200)
 	}
 };
 
