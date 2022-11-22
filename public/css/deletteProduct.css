@@ -1,5 +1,5 @@
 
-.eliminar-producto{
+.modificar-producto{
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -29,7 +29,7 @@
     margin-top: 20px
 }
 
-.delette{
+.edit{
     width: 100px;
     align-self: center;
     margin: 10px;
@@ -45,7 +45,30 @@
     color: white;
 }
 
+.delete{
+    width: 100px;
+    align-self: center;
+    margin: 10px;
+    padding: 8px;
+    width: 142%;
+    letter-spacing: 3px;
+    border-radius: 35px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    color: rgb(82, 78, 78);
+    background-color:  #f6becf;
+    color: white;  
+    position: relative;
+    bottom: 100%;
+    right: 28%;
+}
 
+.box-buttonDelete{
+display: flex;
+justify-content: center;
+
+}
 button:hover{
     background-color: #FFFDD0;
     color:rgb(82, 78, 78)

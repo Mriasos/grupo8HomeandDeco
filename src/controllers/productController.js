@@ -91,11 +91,17 @@ const controller = {
 
 	// Eliminar un producto
 	destroy : (req, res) => {
-		var productId = req.params.id 
-        products = products.filter(function(product){
+		const productId = req.params.id 
+        productsNuevo = products.filter(function(product){
         return product.id !== productId
 		})
-		res.sendStatus(200)
+
+		products = productsNuevo
+
+		const jsonProduct = JSON.stringify(products)
+		fs.writeFileSync(productsFilePath, jsonProduct) 
+		
+		res.redirect('/productList')
 	}
 };
 

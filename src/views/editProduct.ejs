@@ -13,7 +13,7 @@
     <%- include ('./partials/header.ejs') %>
 
         <section class="container">
-            <form class="eliminar-producto" action="/product/<%= productToFind.id %>?_method=put" method="post">
+            <form class="modificar-producto" action="/product/<%= productToFind.id %>?_method=put" method="post">
                 <div class=" encabezado">
                     <h1>Eliminar / Modificar Producto</h1>
                 </div>
@@ -33,29 +33,29 @@
                 <div class="category">
                     <label for="category" class="form-label">Categoría:</label>
                     <select name="category" id="category" class="form-input">
-                        <option value="">Elegí</option>  
-                                <option 
-                                <% if(productToFind.category == 'in-sale') {%>
-                                    selected
-                                    <% } %> 
-                                
-                                value="in-sale" >En oferta</option>
-            
-                        <option>                                               
-                        <option 
-                        <% if(productToFind.category == 'visited') {%>
+                        <option value="">Elegí</option>
+                        <option <% if(productToFind.category=='in-sale' ) {%>
                             selected
                             <% } %>
-                        
-                        value="visited" >Últimos visitados</option>
+
+                                value="in-sale" >En oferta
+                        </option>
+
+                        <option>
+                        <option <% if(productToFind.category=='visited' ) {%>
+                            selected
+                            <% } %>
+
+                                value="visited" >Últimos visitados
+                        </option>
                     </select>
                 </div>
 
                 <div class="discount">
                     <label for="discount">Descuento del producto</label>
-                    <input id="discount" type="text" name="discount" value="<%= productToFind.discount %> " >
+                    <input id="discount" type="text" name="discount" value="<%= productToFind.discount %> ">
                 </div>
-                
+
                 <!--<div class="product-color">
                     <label for="color">Color del producto</label>
                     <input id="color" type="color">
@@ -74,9 +74,18 @@
                     <input id="price" type="text" name="price" value="<%= productToFind.price %> ">
                 </div>
 
-                <button class="delette">ELIMINAR / MODIFICAR</button>
+                <button class="edit"> MODIFICAR</button>
 
             </form>
+            <div class="box-buttonDelete">
+                <form class="eliminar-producto" action="/product/<%= productToFind.id %>?_method=delette" method="post">
+
+                    <button type="submit" class="delete"
+                        onclick="return confirm('Estas seguro que deseas eliminar este producto?')"> ELIMINAR </button>
+
+                </form>
+            </div>
+
         </section>
 
         <%- include ('./partials/footer.ejs') %>

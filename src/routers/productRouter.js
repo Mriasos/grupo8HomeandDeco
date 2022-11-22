@@ -4,8 +4,6 @@ let router = express.Router()
 const productController = require ('../../src/controllers/productController')
 
 
-
-
 /*** MOSTRAR TODOS LOS PRODUCTOS ***/ 
 router.get('/', productController.index) 
 //router.get('/search', productController.search); 
