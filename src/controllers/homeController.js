@@ -7,11 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const homeController = {
 	index: (req, res) => {
-		return res.render('home', {product:products});
+		const insaleProducts = products.filter (product => product.category=="in-sale");
+
+		return res.render('home', {product:insaleProducts});
 		//filtrar por visitados
 		//const visitedProducts = products.filter (product => product.category=="visited");
-		//const insaleProducts = products.filter (product => product.category=="in-sale");
-
+		
 		//Devolver datos a la vista
 		//const viewData = {
 			//visitedProducts,
