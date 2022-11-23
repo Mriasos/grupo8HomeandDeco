@@ -8,22 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	// listado de todos los productos
 	index: (req, res) => {
-	res.render('productList', {products});
-		//filtrar por visitados
-		//const visitedProducts = products.filter (product => product.category=="visited");
-		//const insaleProducts = products.filter (product => product.category=="in-sale");
-
-		//Devolver datos a la vista
-		//const viewData = {
-			//visitedProducts,
-			//insaleProducts
-
-
-		//}
-		
-		//Devolver vista con los datos
-		
-		//return res.render((path.resolve('src/views/productList.ejs')), viewData) ;
+	res.render(('productList'), {product: products});
 	},
 	
 
@@ -34,7 +19,7 @@ const controller = {
 		if(productToFind == undefined){
 			return res.send('No se encontro el producto buscado')
 		}
-		return res.render('detail'), {productToFind: productToFind }
+		return res.render(('detail'), {productToFind: productToFind })
 
 	},
 
@@ -62,7 +47,7 @@ const controller = {
 				return res.send('No se encontro el producto buscado')
 			}
 			
-			return res.render('editProduct', {productToFind: productToFind })
+			return res.render(('editProduct'), {productToFind: productToFind })
 	
 			
 		},
@@ -91,18 +76,15 @@ const controller = {
 
 	// Eliminar un producto
 	destroy : (req, res) => {
-		const productId = req.params.id 
-       const productsNuevo = products.filter(function(product){
-        return product.id !== productId
+		const productId = req.params.id
+		const productsNuevo = products.filter(function(product){
+		return product.id != productId
 		})
-
-		products = productsNuevo
-
-		const jsonProduct = JSON.stringify(products)
-		fs.writeFileSync(productsFilePath, jsonProduct) 
-		
-		res.redirect('./')
-	}
+		const jsonProduct = JSON.stringify(productsNuevo)
+		fs.writeFileSync(productsFilePath, jsonProduct)
+		res.redirect("/")
+		}
+	
 };
 
 
