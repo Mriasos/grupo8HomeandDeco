@@ -11,3 +11,7 @@ En lo que respecta a los aspectos negativos que se dieron en el desarrollo de la
 ## SPRINT 3:
 De acuerdo al resultado de las entregas anteriores y los conocimientos adquiridos, hemos presentado inconvenientes en separación de vistas que originaron focalizar la atención  en el ruteo y descubrir donde radicaba la falla. Dicha situacion fue autogestionada y resuelta. 
 En sprint 3, hemos podido con las herramientas que poseemos avanzar en la propia resolución de eventos.
+
+## SPRINT 4:
+Finalizado el sprint, notamos que tanto las reuniones semanales como el Whatsapp siguen siendo una de las herramientas que mas utilizamos dado a que podemos coordinar y dividirnos las tareas para ser mas eficientes y no pisarnos entre nosotros.
+En cuanto a los temas que se abarcan en este sprint, notamos una complejidad muy alta, debido a que que se unificaron muchos temas que fuimos viendo a lo largo del curso, por ejemplo, EJS, vistas dinámicas, la parte del codigo de JAVASCRIPT, etc. Sin embargo, luego de resolver algunas dudas junto con los docentes y revisar el material y ejercicios, logramos solucionar los problemas que fueron surgiendo.
