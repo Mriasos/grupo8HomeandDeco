@@ -2,11 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.resolve('./src/data/productDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const homeController = {
 	index: (req, res) => {
+		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 		const insaleProducts = products.filter (product => product.category=="in-sale");
 
 		return res.render('home', {product:insaleProducts});

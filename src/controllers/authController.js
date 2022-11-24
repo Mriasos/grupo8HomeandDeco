@@ -5,7 +5,7 @@ const renderRegister = (req, res) => {
 }
 
 const renderLoggin = (req, res) => {
-    return res.render(path.resolve('src/views/user/loggin.ejs'))
+    return res.render(path.resolve('src/views/user/login.ejs'))
 }
 
 module.exports= {renderLoggin, renderRegister}
