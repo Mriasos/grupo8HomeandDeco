@@ -3,6 +3,7 @@
 }
 /*FORMULARIO REGISTRO*/
 .registro{
+    padding: 30px;
     width: 100%;
     max-width: 400px;
     border-radius: 20px;
@@ -18,7 +19,7 @@
     margin-top: 20px
 }
 .form_input{
-    width: 100%;
+    width: 60%;
     color: #706c6c;
     font-size: 1em;
     padding: .6em .3em; 
@@ -33,25 +34,26 @@
 form #nombre{
     border-radius: 5px;
     width:75%;
-    cursor: pointer;
+ 
     transition: .5s, color .3s;
 }
 form #apellido{
     width: 75%;
-    cursor: pointer;
+    
 }
 form #email{
     width: 75%;
-    cursor: pointer;
+   
 }
 form #fnac{
     width: 75%;
-    cursor: pointer;
+ 
+    
     
 }
 form #Contraseña{
     width: 75%;
-    cursor: pointer;
+ 
 }
 .boton_enviar{
     font-family: 'Roboto', sans-serif;
@@ -65,6 +67,12 @@ form #Contraseña{
     font-size: 1em;
     margin-bottom: 19px;
     margin-top: 19px;
+}
+
+#imagen{
+    border: none;
+    width: 75%;
+    
 }
 @media(min-width: 576px){
 

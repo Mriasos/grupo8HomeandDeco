@@ -82,6 +82,7 @@ const controller = {
 		})
 		const jsonProduct = JSON.stringify(productsNuevo)
 		fs.writeFileSync(productsFilePath, jsonProduct)
+		
 		res.redirect("/")
 		}
 	
