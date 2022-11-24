@@ -8,6 +8,10 @@ const renderRegister = (req, res) => {
 const renderLoggin = (req, res) => {
     return res.render(path.resolve('src/views/user/login.ejs'))
 }
+
+const store= (req,res)=>{
+
+}
 //pongo para verificar
 //let userToCreate ={
   //  ...req.body,
@@ -15,4 +19,4 @@ const renderLoggin = (req, res) => {
     //avatar:req.file.filename
     
 //}
-module.exports= {renderLoggin, renderRegister}
+module.exports= {renderLoggin, renderRegister,store}

@@ -22,9 +22,8 @@ const upload = multer ({storage});
 router.get('/register', authController.renderRegister)
 
 //Procesamiento de formulario
-//router.post('/', upload.single('imagenUsuario'), authController.store)
+router.post('/', upload.single('imagenUsuario'), authController.store)
 
 router.get('/login', authController.renderLoggin)
-
 
 module.exports = router
