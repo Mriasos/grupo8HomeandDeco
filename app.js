@@ -15,6 +15,8 @@ app.use(express.urlencoded({extended: false})); //Para poder trabajar con los da
 app.use(express.json())
 app.use(methodOverride('_method'))//Para poder utilizar metodo PUT/PATH/DELETE
 
+
+
 const puerto = 3000;
 app.listen(puerto, ()=> {
     console.log('iniciando')
@@ -23,21 +25,16 @@ app.listen(puerto, ()=> {
 
 //Routes
 const homeRouter = require('./src/routers/homeRouter')
+const cartRouter = require('./src/routers/cartRouter')
+const authRouter = require('./src/routers/authRouter')
+const productRouter= require('./src/routers/productRouter')
+const logMiddleware = require ('./src/middlewares/logMiddleware')
 
 app.use('/',homeRouter)
-
-const cartRouter = require('./src/routers/cartRouter')
-
 app.use('/cart',cartRouter)
-
-const authRouter = require('./src/routers/authRouter')
-
 app.use('/auth', authRouter)
-
-const productRouter= require('./src/routers/productRouter')
-
 app.use('/product', productRouter)
-
+app.use(logMiddleware)
 
 
 
