@@ -12,7 +12,7 @@
 <body>
     <%- include ('../partials/header.ejs') %>
    <body>
-    <form action="/views/loggin.ejs" class="registro" enctype="multipart/form-data">
+    <form action="/views/login" method="POST" class="registro" enctype="multipart/form-data"> 
         <h1 id="tituloform">Regístrate</h1>
         <label id="nombre">Escriba su nombre: <input type="text" class="form_input" id="nombre" name="nombre" placeholder="Ej: Federico"/></label>
         <label id="apellido">Escriba su apellido: <input type="text" class="form_input" id="apellido" name="apellido" placeholder="Ej: Martinez"/></label>
@@ -20,7 +20,7 @@
         <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email" placeholder="Ej: federico@gmail.com"/></label>
         <label id="fnac">Fecha de nacimiento: <input type="date" class="form_input" id="fnac" name="fnac" /></label>
         <label id="Contraseña">Contraseña: <input type="password" class="form_input" id="Contraseña" name="Contraseña"/></label>
-        <label id="imagen">Foto de perfil: <div> <input type="file" class="form_input" id="imagen" name="imagen"/> </div>  </label>
+        <label id="imagen">Imagen de perfil: <div> <input type="file" class="form_input" id="imagen" name="imagenUsuario"/> </div>  </label>
        
         <input type="submit" class="boton_enviar" value="Crear">
         
