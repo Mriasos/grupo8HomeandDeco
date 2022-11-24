@@ -36,7 +36,7 @@ const controller = {
 		const jsonProduct = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, jsonProduct) 
 
-	return res.send(camposNuevosProductos)
+		res.redirect("/")
 	},
 
 	// Actualizar - Form para editar
@@ -69,7 +69,7 @@ const controller = {
 		const jsonProduct = JSON.stringify(products)
 		fs.writeFileSync(productsFilePath, jsonProduct) 
 		
-		return res.send(products[productIndex])
+		res.redirect("/")
 		
 	},
 
