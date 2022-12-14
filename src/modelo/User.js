@@ -25,6 +25,12 @@ const User ={
         let userFound = allUsers.find(oneUser => oneUser[field] === text);
         return userFound;
     },
+    //buscar usuario por id
+    findByPk: function(id){
+        let allUsers = this.findAll();
+        let userFound = allUsers.find(oneUser => oneUser.id === id);
+        return userFound;
+    },
 //metodo para guardar usuario en DB
     create:function(userData){
         let allUsers = this.findAll(); 
