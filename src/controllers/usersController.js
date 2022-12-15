@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs')
 
 
-const productsFilePath = path.resolve('./src/data/productDataBase.json');
+const productsFilePath = path.resolve('./src/data/user.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const userController = {
