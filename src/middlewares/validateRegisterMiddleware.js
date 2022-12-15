@@ -1,7 +1,7 @@
 const path = require('path');
 const { body } = require('express-validator');
 
-module.exports = [
+const validateRegister = [
     body('fullName').notEmpty().withMessage('Tenés que escribir un nombre'),
     body('email')
     .notEmpty().withMessage('Tenés que escribir un correo electronico').bail()
@@ -23,3 +23,6 @@ module.exports = [
         return true;
     })
 ]
+
+
+module.exports = validateRegister
