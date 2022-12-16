@@ -26,13 +26,13 @@ app.listen(puerto, ()=> {
 //Routes
 const homeRouter = require('./src/routers/homeRouter')
 const cartRouter = require('./src/routers/cartRouter')
-const authRouter = require('./src/routers/authRouter')
+const usersRouter = require('./src/routers/usersRouter')
 const productRouter= require('./src/routers/productRouter')
 const logMiddleware = require ('./src/middlewares/logMiddleware')
 
 app.use('/',homeRouter)
 app.use('/cart',cartRouter)
-app.use('/auth', authRouter)
+app.use('/users', usersRouter)
 app.use('/product', productRouter)
 app.use(logMiddleware)
 

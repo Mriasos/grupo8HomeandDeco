@@ -14,7 +14,7 @@ const userController = {
 
 	// registro de usuario
 	register: (req, res) => {
-	return res.render('userRegisterForm')
+		return res.render(path.resolve('src/views/user/register.ejs'))
 	},
 	
 
