@@ -16,9 +16,6 @@ const userController = require ('../controllers/userController')
 
 //Configuracion de multer
 const multerMiddle = require('../middlewares/multerMiddleware')
-  
-
-
 
 //Requiero la variable que contiene la validacion 
 const validationRegistro = require('../middlewares/validateRegisterMiddleware')

@@ -9,7 +9,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const userController = {
 	login: function(req,res){
-        res.render(path.resolve('login'));
+        res.render(path.resolve(('src/views/user/login.ejs')));
     },
 
 	// registro de usuario
