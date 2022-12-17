@@ -7,6 +7,8 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', 'src/views')
 
+
+
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 
 

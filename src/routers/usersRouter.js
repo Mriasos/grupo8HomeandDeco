@@ -12,28 +12,31 @@ const bcrypt = require('bcryptjs');
 //Requiero Multer, ya que voy a permitir que el usuario que se registre suba su avatar
 const multer = require('multer');
 
-const userController = require ('../controllers/userController')
+const userController = require ('../../src/controllers/userController')
 
 //Configuracion de multer
 const multerMiddle = require('../middlewares/multerMiddleware')
 
 //Requiero la variable que contiene la validacion 
-const validationRegistro = require('../middlewares/validateRegisterMiddleware')
+const validationRegistro = require('../middlewares/validateRegisterMiddleware');
 
-router.get('/register', userController.register)
+//Requiero la variable que contiene multer 
+const uploadFile = require('../middlewares/multerMiddleware');
+
 
 //RUTAS
 
+router.get('/register', userController.register)
+
+router.post('/register', validationRegistro,  uploadFile.single('imagenUsuario'), userController.processRegister);
+
 router.get('/login', userController.login);
 
-router.post('/login', validationRegistro, userController.processRegister);
-
-router.get('/registro', userController.register);
 
 module.exports = router;
-//Aqui en esta ruta envio al controlador el avatar del usuario así como las respectivas validaciones
 
-//router.post('/registro', upload.single('avatar'),validacionesRegistro, controllersUser.create);
+
+
 
 
 
