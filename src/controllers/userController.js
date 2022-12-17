@@ -7,6 +7,9 @@ const User = require('../models/User')
 //Requiero el paquete para comparar las contraseñas  que tengo hash
 const bcrypt = require('bcryptjs');
 
+
+
+
 const userFilePath = path.resolve('./src/data/user.json');
 const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -14,6 +17,33 @@ const userController = {
 	login: function(req,res){
         res.render(path.resolve(('src/views/user/login.ejs')));
     },
+
+	//validacion de login
+	processLogin: (req,res) => {
+		let userToLogin = User.findByField('email', req.body.email);
+		if(userToLogin){
+			let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password)
+			if(contraseñaCorrecta){
+				delete userToLogin.password;
+				req.session.userLogged = userToLogin;
+				return res.redirect('/')
+			}
+			return res.render(path.resolve(('src/views/user/login.ejs')),{
+				errors: {
+					email:{
+						msg: 'Las credenciales son invalidas'
+					}
+				}
+			});
+		}
+		return res.render(path.resolve(('src/views/user/login.ejs')),{
+			errors: {
+				email:{
+					msg: 'No se encuentra este email'
+				}
+			}
+		});
+	},
 
 	// registro de usuario
 	register: (req, res) => {

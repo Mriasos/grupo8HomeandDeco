@@ -32,6 +32,7 @@ router.post('/register', uploadFile.single('imagenUsuario'), validateRegister, u
 
 router.get('/login', userController.login);
 
+router.post('/login', userController.processLogin);
 
 module.exports = router;
 

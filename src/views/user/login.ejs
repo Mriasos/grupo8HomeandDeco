@@ -13,12 +13,17 @@
     <body>
         <div class="container">
 
-            <form method="post" action=" /contacto">
+            <form method="post" action=" /users/login/">
 
                 <h2>Iniciar sesión</h2>
                 <div class="form-body">
                     <i class="fas fa-user"></i>
-                    <input class="controls" type="text" placeholder="Usuario">
+                    <input class="controls" type="email" placeholder="Usuario">
+                    <% if(locals.errors && errors.email) { %>
+                        <div class="error-registro">
+                           <%= errors.email.msg %> 
+                        </div>
+                           <% } %> 
                 </div>
                 <div class="form-body">
                     <i class="fas fa-lock"></i>

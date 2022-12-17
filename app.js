@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const publicPath = path.resolve('public');
+const session = require('express-session')
 
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
@@ -16,6 +17,11 @@ const methodOverride =  require('method-override'); // Pasar poder usar los mét
 app.use(express.urlencoded({extended: false})); //Para poder trabajar con los datos del JSON
 app.use(express.json())
 app.use(methodOverride('_method'))//Para poder utilizar metodo PUT/PATH/DELETE
+app.use(session({
+    secret: "esto es un secreto",
+    resave: false,
+    saveUninitialized: false
+}))
 
 
 

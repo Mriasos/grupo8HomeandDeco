@@ -6,5 +6,21 @@
   "fnac": "2022-12-09",
   "password": "$2a$10$bLYL9aki4817bHmHAf3ZIuZZYshvL6z0jLgq54omdIxf.3vatknWW",
   "image": "1671314013519_img.jpg"
+ },
+ {
+  "id": 2,
+  "fullName": "MARENGO ANTONELLA ",
+  "email": "ANTONELLAMARENGO25@GMAIL.COM",
+  "fnac": "1994-10-25",
+  "password": "$2a$10$.DG2wfplg3qvv.E5xoYMTuIgWhEnUbUjXFyFc2.8F/H.TX2H666Um",
+  "image": "1671315366826_img.jpg"
+ },
+ {
+  "id": 3,
+  "fullName": " MENIN THIAGO",
+  "email": "THIAGO123@GMAIL.COM",
+  "fnac": "2022-12-15",
+  "password": "$2a$10$pfpOwP6sHpSi6q2xODlVA.sFtjWKw321qs0ys0hF2MX4Df.EwI/cm",
+  "image": "1671316616065_img.jpg"
  }
 ]

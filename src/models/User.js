@@ -20,9 +20,9 @@ const User ={
         return this.getData();
     },
     //buscar usuario,primer parametro columna ( name, email,etc) segundo param dato que tenga 
-    findByField: function (field, text){
+    findByField: function (field, email){
         let allUsers = this.findAll(); 
-        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        let userFound = allUsers.find(oneUser => oneUser[field] === email);
         return userFound;
     },
     //buscar usuario por id
