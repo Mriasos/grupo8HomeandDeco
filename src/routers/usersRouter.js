@@ -6,8 +6,7 @@ const path = require('path');
 //Requiero expres-validator
 const { body } = require('express-validator');
 
-//Requiero el paquete para comparar las contraseñas  que tengo hash
-const bcrypt = require('bcryptjs');
+
 
 //Requiero Multer, ya que voy a permitir que el usuario que se registre suba su avatar
 const multer = require('multer');

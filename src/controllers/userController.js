@@ -4,6 +4,9 @@ const {validationResult} = require('express-validator')
 
 const User = require('../models/User')
 
+//Requiero el paquete para comparar las contraseñas  que tengo hash
+const bcrypt = require('bcryptjs');
+
 const userFilePath = path.resolve('./src/data/user.json');
 const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
@@ -29,14 +32,28 @@ const userController = {
           });
 
         }
+
+		let userInDb = User.findByField('email', req.body.email)
+		if(userInDb) {
+			return res.render(path.resolve('src/views/user/register.ejs'),{
+				errors: {
+					email: {
+						msg: "Este email ya esta registrado"
+					}
+				},
+				oldData: req.body
+			})
+		}
+
         
 		let userToCreate = {
 			...req.body, 
+			password: bcrypt.hashSync(req.body.password, 10),
 			image: req.file.filename
 		}
 
 		User.create(userToCreate);
-        return res.send('el usuario de creo con exito!')
+        return res.redirect('/users/login')
 		
 	},
 
