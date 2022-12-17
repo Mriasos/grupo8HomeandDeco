@@ -18,7 +18,7 @@ const userController = require ('../../src/controllers/userController')
 const multerMiddle = require('../middlewares/multerMiddleware')
 
 //Requiero la variable que contiene la validacion 
-const validationRegistro = require('../middlewares/validateRegisterMiddleware');
+const validateRegister = require('../middlewares/validateRegisterMiddleware');
 
 //Requiero la variable que contiene multer 
 const uploadFile = require('../middlewares/multerMiddleware');
@@ -29,7 +29,7 @@ const uploadFile = require('../middlewares/multerMiddleware');
 
 router.get('/register', userController.register)
 
-router.post('/register', uploadFile.single('imagenUsuario'), userController.processRegister);
+router.post('/register', uploadFile.single('imagenUsuario'), validateRegister, userController.processRegister);
 
 router.get('/login', userController.login);
 

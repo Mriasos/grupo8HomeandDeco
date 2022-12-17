@@ -2,12 +2,12 @@ const path = require('path');
 const { body } = require('express-validator');
 
 const validateRegister = [
-    body('fullName').notEmpty().withMessage('Tenés que escribir un nombre'),
+    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
     body('email')
-    .notEmpty().withMessage('Tenés que escribir un correo electronico').bail()
-    .isEmail().withMessage('Debes escribir un formato de correo válido'),
-    body('password').notEmpty().withMessage('Tenés que escribir una contraseña'),
-    body('fnac').notEmpty().withMessage('Tienes que poner tu fecha de nacimiento'),
+    .notEmpty().withMessage('Tienes que escribir un email ').bail()
+    .isEmail().withMessage('Tienes que escribir un formato de correo válido'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('fnac').notEmpty().withMessage('Tienes que escribir tu fecha de nacimiento'),
     body('imagenUsuario').custom((value, {req }) =>{
         let file = req.file;
         let accepedExtensions = ['.jpg', '.png', '.gif'];
