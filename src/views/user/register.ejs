@@ -16,7 +16,7 @@
 
     <form action="/users/register" method="post" class="registro"  enctype="multipart/form-data" > 
         <h1 id="tituloform">Regístrate</h1>
-        <label id="fullName">Escriba su nombre completo: <input type="text" class="form_input id="fullName" name="fullName" /></label>
+        <label id="fullName">Escriba su nombre completo: <input type="text" class="form_input" id="fullName" name="fullName" value="<%= locals.oldData ? oldData.fullName : null %> "/></label>
        
         <% if(locals.errors && errors.fullName) { %>
      <div class="error-registro">
@@ -24,7 +24,7 @@
      </div>
         <% } %> 
 
-        <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email" /></label>
+        <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %> " /></label>
         <% if(locals.errors && errors.email) { %>
             <div class="error-registro">
                <%= errors.email.msg %> 
@@ -36,14 +36,19 @@
                <%= errors.fnac.msg %> 
             </div>
                <% } %> 
-        <label id="Contraseña">Contraseña: <input type="password" class="form_input" id="Contraseña" name="Contraseña"/></label>
+        <label id="password">Contraseña: <input type="password" class="form_input" id="password" name="password" /></label>
         <% if(locals.errors && errors.password) { %>
             <div class="error-registro">
                <%= errors.password.msg %> 
             </div>
                <% } %> 
-        <label id="imagen">Imagen de perfil: <div> <input type="file" class="form_input" id="imagen" name="imagenUsuario"/> </div>  </label>
-       
+        <label id="imagen">Imagen de perfil: <div> <input type="file" class="form_input" id="imagen" name="imagenUsuario" value="<%= locals.oldData ? oldData.imagenUsuario : null %> " /> </div>  </label>
+        <% if(locals.errors && errors.imagenUsuario) { %>
+            <div class="error-registro">
+               <%= errors.imagenUsuario.msg %> 
+            </div>
+               <% } %> 
+
         <input type="submit" class="boton_enviar" value="Crear">
         
 

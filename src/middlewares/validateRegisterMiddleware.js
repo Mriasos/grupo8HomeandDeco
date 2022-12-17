@@ -6,7 +6,7 @@ const validateRegister = [
     body('email')
     .notEmpty().withMessage('Tienes que escribir un email ').bail()
     .isEmail().withMessage('Tienes que escribir un formato de correo válido'),
-    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña').isLength(8).withMessage('La contraseña debe tener como minimo 8 caracteres'),
     body('fnac').notEmpty().withMessage('Selecciona tu fecha de nacimiento'),
     body('imagenUsuario').custom((value, {req }) =>{
         let file = req.file;
