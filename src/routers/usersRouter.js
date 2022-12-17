@@ -1,7 +1,7 @@
 let express = require('express')
 let router = express.Router()
 const path = require('path');
-const { dirname } = require('path');
+
 
 //Requiero expres-validator
 const { body } = require('express-validator');
@@ -24,11 +24,12 @@ const validationRegistro = require('../middlewares/validateRegisterMiddleware');
 const uploadFile = require('../middlewares/multerMiddleware');
 
 
+
 //RUTAS
 
 router.get('/register', userController.register)
 
-router.post('/register', validationRegistro,  uploadFile.single('imagenUsuario'), userController.processRegister);
+router.post('/register', uploadFile.single('imagenUsuario'), userController.processRegister);
 
 router.get('/login', userController.login);
 

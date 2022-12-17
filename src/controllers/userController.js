@@ -20,16 +20,35 @@ const userController = {
 
 	// validacion del registro
 	processRegister: (req, res) => {
-		const resultValidation = validationResult(req);
-        if(resultValidation.errors.length > 0){
-            return res.render('register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
+		return res.send({
+			body: req.body,
+			file: req.file
+		})
+		//const resultValidation = validationResult(req);
+       // if(resultValidation.errors.length > 0){
+        //    return res.render((path.resolve('src/views/user/register.ejs')), {
+         //       errors: resultValidation.mapped(),
+          //      oldData: req.body
+          //  });
 
-        }
-        user.create(req.body);
-        return res.redirect("/")
+     //   }
+        
+		//user.create(req.body);
+        //return res.render("El usuario se creo con exito!")
+		// let errors = validationResult(req)
+		//if(errors.isEmpty()){
+		//	let user = req.body
+		//	userId = usersModel.create(user)
+
+		//	res.redirect('/users/' + userId)
+		//}	
+
+		//else{
+		//	res.render('users/create' , {errors: errors.mapped(), old: req.body})
+		//}
+
+
+
 		
 	},
 
