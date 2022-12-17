@@ -2,7 +2,7 @@ const path = require('path');
 const { body } = require('express-validator');
 
 const validateRegister = [
-    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('fullName').notEmpty().withMessage('Tienes que escribir un nombre y apellido'),
     body('email')
     .notEmpty().withMessage('Tienes que escribir un email ').bail()
     .isEmail().withMessage('Tienes que escribir un formato de correo válido'),

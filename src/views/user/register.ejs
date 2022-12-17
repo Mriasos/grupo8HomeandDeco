@@ -17,12 +17,11 @@
     <form action="/users/register" method="post" class="registro"  enctype="multipart/form-data" > 
         <h1 id="tituloform">Regístrate</h1>
         <label id="fullName">Escriba su nombre completo: <input type="text" class="form_input" id="fullName" name="fullName" value="<%= locals.oldData ? oldData.fullName : null %> "/></label>
-       
         <% if(locals.errors && errors.fullName) { %>
-     <div class="error-registro">
-        <%= errors.fullName.msg %> 
-     </div>
-        <% } %> 
+         <div class="error-registro">
+            <%= errors.fullName.msg %> 
+         </div>
+            <% } %>  
 
         <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email" value="<%= locals.oldData ? oldData.email : null %> " /></label>
         <% if(locals.errors && errors.email) { %>
@@ -30,7 +29,7 @@
                <%= errors.email.msg %> 
             </div>
                <% } %> 
-        <label id="fnac">Fecha de nacimiento: <input type="date" class="form_input" id="fnac" name="fnac" /></label>
+        <label id="fnac">Fecha de nacimiento: <input type="date" class="form_input" id="fnac" name="fnac"  value="<%= locals.oldData ? oldData.fnac : null %> "/></label>
         <% if(locals.errors && errors.fnac) { %>
             <div class="error-registro">
                <%= errors.fnac.msg %> 

@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs')
 const {validationResult} = require('express-validator')
 
-
+const User = require('../models/User')
 
 const userFilePath = path.resolve('./src/data/user.json');
 const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
@@ -30,22 +30,13 @@ const userController = {
 
         }
         
-		//user.create(req.body);
-        //return res.render("El usuario se creo con exito!")
-		// let errors = validationResult(req)
-		//if(errors.isEmpty()){
-		//	let user = req.body
-		//	userId = usersModel.create(user)
+		let userToCreate = {
+			...req.body, 
+			image: req.file.filename
+		}
 
-		//	res.redirect('/users/' + userId)
-		//}	
-
-		//else{
-		//	res.render('users/create' , {errors: errors.mapped(), old: req.body})
-		//}
-
-
-
+		User.create(userToCreate);
+        return res.send('el usuario de creo con exito!')
 		
 	},
 
