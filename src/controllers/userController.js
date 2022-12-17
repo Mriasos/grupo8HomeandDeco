@@ -26,7 +26,7 @@ const userController = {
 				if(contraseñaCorrecta){
 					delete userToLogin.password;
 					req.session.userLogged = userToLogin;
-					return res.redirect('/')
+					return res.redirect('/users/profile')
 				}
 				return res.render(path.resolve(('src/views/user/login.ejs')),{
 					errors: {

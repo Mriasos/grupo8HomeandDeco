@@ -53,9 +53,10 @@ h2{
     right: 53%;
     padding: 9px;
   }
-  .form-body input [type= "text"]{
+  .form-body input [type= "email"]{
     margin-top: 50px;
   }
+  
    ::placeholder{
     font-size: 80%;
     
@@ -114,6 +115,10 @@ margin: 7px  5px;
     display: none
   }
 
+  .error-login{
+    color: red;
+    font-size: 12px;
+  }
 
 @media(min-width: 576px){
 
