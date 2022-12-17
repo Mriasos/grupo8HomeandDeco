@@ -20,29 +20,29 @@ const userController = {
 
 	//validacion de login
 	processLogin: (req,res) => {
-		let userToLogin = User.findByField('email', req.body.email);
-		if(userToLogin){
-			let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password)
-			if(contraseñaCorrecta){
-				delete userToLogin.password;
-				req.session.userLogged = userToLogin;
-				return res.redirect('/')
+			let userToLogin = User.findByField('email', req.body.email);
+			if(userToLogin){
+				let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password)
+				if(contraseñaCorrecta){
+					delete userToLogin.password;
+					req.session.userLogged = userToLogin;
+					return res.redirect('/')
+				}
+				return res.render(path.resolve(('src/views/user/login.ejs')),{
+					errors: {
+						email:{
+							msg: 'Las credenciales son invalidas'
+						}
+					}
+				});
 			}
 			return res.render(path.resolve(('src/views/user/login.ejs')),{
 				errors: {
 					email:{
-						msg: 'Las credenciales son invalidas'
+						msg: 'No se encuentra este email'
 					}
 				}
 			});
-		}
-		return res.render(path.resolve(('src/views/user/login.ejs')),{
-			errors: {
-				email:{
-					msg: 'No se encuentra este email'
-				}
-			}
-		});
 	},
 
 	// registro de usuario
@@ -85,6 +85,11 @@ const userController = {
 		User.create(userToCreate);
         return res.redirect('/users/login')
 		
+	},
+
+	//registro de usuario
+	profile: (req, res) => {
+		return res.render(path.resolve('src/views/user/profile.ejs'))
 	},
 
 	

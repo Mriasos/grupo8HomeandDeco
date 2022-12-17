@@ -13,8 +13,6 @@ const multer = require('multer');
 
 const userController = require ('../../src/controllers/userController')
 
-//Configuracion de multer
-const multerMiddle = require('../middlewares/multerMiddleware')
 
 //Requiero la variable que contiene la validacion 
 const validateRegister = require('../middlewares/validateRegisterMiddleware');
@@ -33,6 +31,8 @@ router.post('/register', uploadFile.single('imagenUsuario'), validateRegister, u
 router.get('/login', userController.login);
 
 router.post('/login', userController.processLogin);
+
+router.get('/profile', userController.profile)
 
 module.exports = router;
 
