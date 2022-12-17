@@ -7,7 +7,7 @@ const validateRegister = [
     .notEmpty().withMessage('Tienes que escribir un email ').bail()
     .isEmail().withMessage('Tienes que escribir un formato de correo válido'),
     body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
-    body('fnac').notEmpty().withMessage('Tienes que escribir tu fecha de nacimiento'),
+    body('fnac').notEmpty().withMessage('Selecciona tu fecha de nacimiento'),
     body('imagenUsuario').custom((value, {req }) =>{
         let file = req.file;
         let accepedExtensions = ['.jpg', '.png', '.gif'];

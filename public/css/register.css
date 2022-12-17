@@ -19,7 +19,7 @@
     margin-top: 20px
 }
 .form_input{
-    width: 60%;
+    width: 75%;
     color: #706c6c;
     font-size: 1em;
     padding: .6em .3em; 
@@ -31,54 +31,61 @@
 #tituloform{
     text-align: center;
 }
-form #name{
+form #fullName{
     border-radius: 5px;
     width:75%;
- 
     transition: .5s, color .3s;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
-form #apellido{
-    width: 75%;
-    
-}
+
 form #email{
     width: 75%;
-   
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
 form #fnac{
     width: 75%;
- 
-    
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
     
 }
 form #Contraseña{
     width: 75%;
- 
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
 .boton_enviar{
     font-family: 'Roboto', sans-serif;
     color: white;
     width: 50%;
     background-color: #f6becf;
-    padding: .6em .3em;
     border-radius: 20px; 
     border: none;
     outline: none;
     font-size: 1em;
-    margin-bottom: 19px;
+    margin-bottom: 30px;
     margin-top: 19px;
 }
 
 #imagen{
     border: none;
     width: 75%;
-    
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
 }
 
 .error-registro{
     color: red;
     font-size: 12px;
 }
+
+
 
 
 @media(min-width: 576px){
