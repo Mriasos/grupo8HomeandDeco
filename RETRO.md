@@ -15,3 +15,7 @@ En sprint 3, hemos podido con las herramientas que poseemos avanzar en la propia
 ## SPRINT 4:
 Finalizado el sprint, notamos que tanto las reuniones semanales como el Whatsapp siguen siendo una de las herramientas que mas utilizamos dado a que podemos coordinar y dividirnos las tareas para ser mas eficientes y no pisarnos entre nosotros.
 En cuanto a los temas que se abarcan en este sprint, notamos una complejidad muy alta, debido a que que se unificaron muchos temas que fuimos viendo a lo largo del curso, por ejemplo, EJS, vistas dinámicas, la parte del codigo de JAVASCRIPT, etc. Sin embargo, luego de resolver algunas dudas junto con los docentes y revisar el material y ejercicios, logramos solucionar los problemas que fueron surgiendo.
+
+## SPRINT 5:
+Ya en este momento se hace mas dificil coordinar la junta de los integrantes del grupo, pero whatsapp sigue siendo la base de la coordinacion y organizacion de los trabajos en grupo.
+Este sprint se hizo bastante dificil para nosotros ya que hubieron temas que hay que ponerle mucha practica como las validaciones y es una de las cosas que mas se dificulto a esta altura. Pudimos resolver las dificultades que tuvimos, algunas gracias a los profesores y otras por labor propio, pero con bastante esfuerzo y dedicacion.
