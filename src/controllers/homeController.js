@@ -9,8 +9,8 @@ const homeController = {
 	index: (req, res) => {
 		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))
 		const insaleProducts = products.filter (product => product.category=="in-sale");
-
-		return res.render('home', {product:insaleProducts});
+		return res.render('home', {product:insaleProducts,
+		user: req.session.user});
 		//filtrar por visitados
 		//const visitedProducts = products.filter (product => product.category=="visited");
 		

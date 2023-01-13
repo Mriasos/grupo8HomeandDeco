@@ -17,10 +17,18 @@
  },
  {
   "id": 3,
-  "fullName": " MENIN THIAGO",
+  "fullName": "MENIN THIAGO",
   "email": "THIAGO123@GMAIL.COM",
   "fnac": "2022-12-15",
   "password": "$2a$10$pfpOwP6sHpSi6q2xODlVA.sFtjWKw321qs0ys0hF2MX4Df.EwI/cm",
   "image": "1671316616065_img.jpg"
+ },
+ {
+  "id": 4,
+  "fullName": "thiago",
+  "email": "menin@mail.com",
+  "fnac": "2023-01-18",
+  "password": "$2a$10$bBIIslTNKwViOFIcPG.dmO5zeAJJAtTGxUNdBDBMx9FE/cI.bvvkq",
+  "image": "1673565316935_img.jpeg"
  }
 ]

@@ -19,7 +19,8 @@ const controller = {
 		if(productToFind == undefined){
 			return res.send('No se encontro el producto buscado')
 		}
-		return res.render(('detail'), {productToFind: productToFind })
+		return res.render(('detail'), {productToFind: productToFind,
+		user: req.session.user})
 
 	},
 

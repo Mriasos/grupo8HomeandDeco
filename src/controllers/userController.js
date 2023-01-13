@@ -15,7 +15,10 @@ const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
 
 const userController = {
 	login: function(req,res){
-        res.render(path.resolve(('src/views/user/login.ejs')));
+        res.render(path.resolve(('src/views/user/login.ejs')),
+		{
+			user: req.session.user
+		});
     },
 
 	//validacion de login
@@ -25,7 +28,7 @@ const userController = {
 				let contraseñaCorrecta = bcrypt.compareSync(req.body.password, userToLogin.password)
 				if(contraseñaCorrecta){
 					delete userToLogin.password;
-					req.session.userLogged = userToLogin;
+					req.session.user = userToLogin;
 					return res.redirect('/users/profile')
 				}
 				return res.render(path.resolve(('src/views/user/login.ejs')),{
