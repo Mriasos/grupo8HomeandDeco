@@ -30,5 +30,13 @@
   "fnac": "2023-01-18",
   "password": "$2a$10$bBIIslTNKwViOFIcPG.dmO5zeAJJAtTGxUNdBDBMx9FE/cI.bvvkq",
   "image": "1673565316935_img.jpeg"
+ },
+ {
+  "id": 5,
+  "fullName": " fernando",
+  "email": "fer@gmail.com",
+  "fnac": "2023-01-01",
+  "password": "$2a$10$ErZNlgffMBE3F9H6U6hW.e/FVyGyuvpvJiurDiOr6oiXKC4C9HIXG",
+  "image": "1673734627125_img.jpg"
  }
 ]

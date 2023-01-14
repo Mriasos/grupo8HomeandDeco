@@ -15,13 +15,15 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+USE hangar;
+
 --
 -- Table structure for table `carritocompra`
 --
 
 DROP TABLE IF EXISTS `carritocompra`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `carritocompra` (
   `id_carritoCompra` int NOT NULL AUTO_INCREMENT,
   `agregarProducto` varchar(45) NOT NULL,
@@ -30,7 +32,7 @@ CREATE TABLE `carritocompra` (
   `cantidadProducto` tinyint NOT NULL,
   `producto` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_carritoCompra`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,7 +51,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `mediosdepago`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `mediosdepago` (
   `id_mediosDePago` int NOT NULL AUTO_INCREMENT,
   `tarjetaDeCredito` tinyint NOT NULL,
@@ -60,7 +62,7 @@ CREATE TABLE `mediosdepago` (
   PRIMARY KEY (`id_mediosDePago`),
   KEY `id_ventas_idx` (`id_ventas`),
   CONSTRAINT `id_ventas` FOREIGN KEY (`id_ventas`) REFERENCES `ventas` (`id_ventas`)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -79,7 +81,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `pedidos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `pedidos` (
   `id_pedidos` int NOT NULL AUTO_INCREMENT,
   `fechaCompra` int NOT NULL,
@@ -96,7 +98,7 @@ CREATE TABLE `pedidos` (
   PRIMARY KEY (`id_pedidos`,`id_carritoCompra`),
   KEY `fk_pedidos_carritoCompra1_idx` (`id_carritoCompra`),
   CONSTRAINT `fk_pedidos_carritoCompra1` FOREIGN KEY (`id_carritoCompra`) REFERENCES `carritocompra` (`id_carritoCompra`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,7 +116,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `productos` (
   `id_productos` int NOT NULL AUTO_INCREMENT,
   `articuloProducto` varchar(45) NOT NULL,
@@ -126,7 +128,7 @@ CREATE TABLE `productos` (
   `eliminarProducto` varchar(45) DEFAULT NULL,
   `listarProducto` varchar(45) NOT NULL,
   PRIMARY KEY (`id_productos`)
-) ENGINE=InnoDB AUTO_INCREMENT=2007 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2007 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,7 +147,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `roles` (
   `id_roles` int NOT NULL AUTO_INCREMENT,
   `cliente` varchar(45) NOT NULL,
@@ -154,7 +156,7 @@ CREATE TABLE `roles` (
   `vendedor` varchar(45) NOT NULL,
   `id_usuarios` int NOT NULL,
   PRIMARY KEY (`id_roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=1006 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1006 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,7 +175,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `id_usuarios` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
@@ -182,7 +184,7 @@ CREATE TABLE `usuarios` (
   `direccion` varchar(45) NOT NULL,
   `ciudad` varchar(45) NOT NULL,
   `provincia` varchar(45) NOT NULL,
-  `celular` float NOT NULL,
+  `celular` varchar(45) NOT NULL,
   `email` varchar(45) NOT NULL,
   `image` longblob NOT NULL,
   `id_roles` int NOT NULL,
@@ -190,7 +192,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id_usuarios`),
   KEY `id_roles_idx` (`id_roles`),
   CONSTRAINT `id_roles` FOREIGN KEY (`id_roles`) REFERENCES `roles` (`id_roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=2055 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2055 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,7 +211,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `ventas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `ventas` (
   `id_ventas` int NOT NULL AUTO_INCREMENT,
   `id_productos` int NOT NULL,
@@ -218,7 +220,7 @@ CREATE TABLE `ventas` (
   PRIMARY KEY (`id_ventas`),
   KEY `id_pedidos_idx` (`id_pedidos`),
   CONSTRAINT `id_pedidos` FOREIGN KEY (`id_pedidos`) REFERENCES `pedidos` (`id_pedidos`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
