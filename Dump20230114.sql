@@ -26,12 +26,11 @@ CREATE TABLE `carritocompra` (
   `id_carritoCompra` int NOT NULL AUTO_INCREMENT,
   `agregarProducto` varchar(45) NOT NULL,
   `vaciarCarrito` varchar(45) DEFAULT NULL,
-  `usuario` varchar(45) NOT NULL,
+  `id_usuarios` int DEFAULT NULL,
   `cantidadProducto` tinyint NOT NULL,
   `producto` varchar(45) DEFAULT NULL,
-  `carritoCompracol` varchar(45) NOT NULL,
   PRIMARY KEY (`id_carritoCompra`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +39,7 @@ CREATE TABLE `carritocompra` (
 
 LOCK TABLES `carritocompra` WRITE;
 /*!40000 ALTER TABLE `carritocompra` DISABLE KEYS */;
+INSERT INTO `carritocompra` VALUES (2,'si','no',2051,1,'Lampara Atenas');
 /*!40000 ALTER TABLE `carritocompra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,10 +92,10 @@ CREATE TABLE `pedidos` (
   `modificarPedido` varchar(45) DEFAULT NULL,
   `eliminarPedido` varchar(45) DEFAULT NULL,
   `producto` varchar(45) NOT NULL,
-  `carritoCompra_id_carritoCompra` int NOT NULL,
-  PRIMARY KEY (`id_pedidos`,`carritoCompra_id_carritoCompra`),
-  KEY `fk_pedidos_carritoCompra1_idx` (`carritoCompra_id_carritoCompra`),
-  CONSTRAINT `fk_pedidos_carritoCompra1` FOREIGN KEY (`carritoCompra_id_carritoCompra`) REFERENCES `carritocompra` (`id_carritoCompra`)
+  `id_carritoCompra` int NOT NULL,
+  PRIMARY KEY (`id_pedidos`,`id_carritoCompra`),
+  KEY `fk_pedidos_carritoCompra1_idx` (`id_carritoCompra`),
+  CONSTRAINT `fk_pedidos_carritoCompra1` FOREIGN KEY (`id_carritoCompra`) REFERENCES `carritocompra` (`id_carritoCompra`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -126,7 +126,7 @@ CREATE TABLE `productos` (
   `eliminarProducto` varchar(45) DEFAULT NULL,
   `listarProducto` varchar(45) NOT NULL,
   PRIMARY KEY (`id_productos`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2007 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -135,6 +135,7 @@ CREATE TABLE `productos` (
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
+INSERT INTO `productos` VALUES (2000,'Lampara Atenas','con tecnica tradicional y artesanal',_binary '/imagenes/lampara1.jpg',3000,'2023-01-10','2023-02-23','no','si'),(2001,'Llavero Cloe','Delicado y practico',_binary '/imagenes/llavero.jpeg',6000,'2023-02-15','2023-03-10','no','si'),(2002,'Bandeja iris','fabricada a mano',_binary '/imagenes/bandeja.jpeg',6000,'2023-01-02','2023-01-30','no','si'),(2003,'Manta Pompeya','tejida a mano en telar',_binary '/imagenes/cubrecama.jpeg',12000,'2023-01-02','2023-04-28','no','si'),(2004,'Recibidor Dallas','De madera de Zoita.',_binary 'imagenes/recibidor.jpeg',3000,'2023-01-02','2023-04-30','no','si'),(2006,'Llavero Cloe','Delicado y practico',_binary '/imagenes/llavero.jpeg',6000,'2023-02-15','2023-03-10','no','si');
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -239,4 +240,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-01-14  8:52:03
+-- Dump completed on 2023-01-14 12:41:39
