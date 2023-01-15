@@ -21,19 +21,19 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     tarjetaDeCredito: {
-      type: DataTypes.INTEGER.TINYINT,
+      type: DataTypes.TINYINT,
       allowNull:false
     },
     transferencia: {
-      type: DataTypes.INTEGER.TINYINT,
+      type: DataTypes.TINYINT,
       allowNull:false
     },
     billetera: {
-      type: DataTypes.INTEGER.TINYINT,
+      type: DataTypes.TINYINT,
       allowNull:false
     },
     mercadoLibre: {
-      type: DataTypes.INTEGER.TINYINT,
+      type: DataTypes.TINYINT,
       allowNull:false
     },
     id_ventas: {
