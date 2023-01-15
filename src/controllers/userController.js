@@ -97,7 +97,7 @@ const userController = {
 
 	//registro de usuario
 	profile: (req, res) => {
-		return res.render(path.resolve('src/views/user/profile.ejs'))
+		return res.render(path.resolve('src/views/user/profile.ejs'), )
 	},
 
 	
