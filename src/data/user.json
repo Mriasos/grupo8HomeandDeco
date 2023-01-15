@@ -38,5 +38,13 @@
   "fnac": "2023-01-01",
   "password": "$2a$10$ErZNlgffMBE3F9H6U6hW.e/FVyGyuvpvJiurDiOr6oiXKC4C9HIXG",
   "image": "1673734627125_img.jpg"
+ },
+ {
+  "id": 6,
+  "fullName": "ANTOMARENGO",
+  "email": "ANTITO@GMAIL.COM",
+  "fnac": "2023-01-07",
+  "password": "$2a$10$5xJrQc75XN14n7SweaxCVukUfW7toIb5dJJSWRAVtphigjJFm89C2",
+  "image": "1673823076154_img.jpg"
  }
 ]
