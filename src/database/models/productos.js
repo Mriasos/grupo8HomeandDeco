@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     }, 
     imageProducto: {
-      type: DataTypes.BLOB
+      type: DataTypes.BLOB('LONG')
     },
     precio: {
       type: DataTypes.FLOAT,
