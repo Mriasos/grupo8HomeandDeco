@@ -51,6 +51,16 @@ const userController = {
 				user: req.session.user
 			});
 	},
+	//logout de la sesion del usuario
+	logout:  (req, res) => {
+		req.session.destroy((err) => {
+		  if(err) {
+			console.log(err);
+		  } else {
+			res.redirect('/login');
+		  }
+		});
+	  },
 
 	// registro de usuario
 	register: (req, res) => {
