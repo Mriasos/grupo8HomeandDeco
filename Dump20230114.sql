@@ -15,6 +15,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+CREATE DATABASE IF NOT EXISTS hangar;
 USE hangar;
 
 --
@@ -178,14 +179,15 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
   `id_usuarios` int NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) NOT NULL,
-  `apellido` varchar(45) NOT NULL,
-  `dni` varchar(45) NOT NULL,
-  `direccion` varchar(45) NOT NULL,
-  `ciudad` varchar(45) NOT NULL,
-  `provincia` varchar(45) NOT NULL,
-  `celular` varchar(45) NOT NULL,
-  `email` varchar(45) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `apellido` varchar(45) ,
+  `dni` varchar(45) ,
+  `direccion` varchar(45) ,
+  `ciudad` varchar(45) ,
+  `provincia` varchar(45) ,
+  `celular` varchar(45) ,
+  `email` varchar(255) NOT NULL,
+  `fecha_nacimiento` date NOT NULL,
   `image` longblob NOT NULL,
   `id_roles` int NOT NULL,
   `password` varchar(45) NOT NULL,
@@ -201,7 +203,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (2050,'juan','fernandez','23456789','369 Emmet Plaza','Cordoba','Cordoba',6863610000,'mfilippazzoc@ustream.tv',_binary 'image',1001,'fk970c'),(2051,'Ezechiel','Baggallay','68795049','7975 Dottie Court','Ciudad de Buenos Aires','Buenos Aires',44995000000,'lmcauliffe0@unblog.fr',_binary 'image',1002,'556789'),(2052,'diana','jackferr','39383729','410 Thierer Court','Malaga','Jujuy',7890130000,'jchuneyk@sina.com.cn',_binary 'image',1003,'lker893'),(2053,'margarita','thompson','98634929','222 Beruti','Cerro de la Gloria','Mendoza',8237880000,'rgenikee@ca.gov',_binary 'image',1004,'hkri897'),(2054,'pimpi','solano','34759484','2005 Calle de la Fortaleza','San Miguel','Jujuy',60345600000,'ssaban3@rediff.com',_binary 'image',1005,'oi768jhgf');
+INSERT INTO `usuarios` VALUES (2050,'juan','fernandez','23456789','369 Emmet Plaza','Cordoba','Cordoba',6863610000,'mfilippazzoc@ustream.tv','1994-10-25',_binary 'image',1001,'fk970c'),(2051,'Ezechiel','Baggallay','68795049','7975 Dottie Court','Ciudad de Buenos Aires','Buenos Aires',44995000000,'lmcauliffe0@unblog.fr', '1994-10-25',_binary 'image',1002,'556789'),(2052,'diana','jackferr','39383729','410 Thierer Court','Malaga','Jujuy',7890130000,'jchuneyk@sina.com.cn', '1994-10-25',_binary 'image',1003,'lker893'),(2053,'margarita','thompson','98634929','222 Beruti','Cerro de la Gloria','Mendoza',8237880000,'rgenikee@ca.gov', '1994-10-25',_binary 'image',1004,'hkri897'),(2054,'pimpi','solano','34759484','2005 Calle de la Fortaleza','San Miguel','Jujuy',60345600000,'ssaban3@rediff.com', '1994-10-25',_binary 'image',1005,'oi768jhgf');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 

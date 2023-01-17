@@ -11,7 +11,10 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      //models.User.belongsTo()
+      models.User.belongsTo(models.Roles, {
+        foreignKey: "id_roles",
+        targetKey: "id_roles"
+      })
 
     }
   }
@@ -23,35 +26,39 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true
     },
     nombre: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(255),
       allowNull: false
     },
     apellido: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     dni: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     direccion: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     ciudad: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     provincia: {
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     celular:{
       type: DataTypes.STRING(45),
-      allowNull: false
+      allowNull: true
     },
     email: {
-      type: DataTypes.STRING(45),
+      type: DataTypes.STRING(255),
+    allowNull: false
+  },
+  fecha_nacimiento: {
+    type: DataTypes.DATEONLY,
     allowNull: false
   },
   image:{
@@ -70,7 +77,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'User',
-    tableName: 'usuarios'
+    tableName: 'usuarios',
+    timestamps: false
   });
   return User;
 };

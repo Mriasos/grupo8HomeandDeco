@@ -59,7 +59,7 @@ const userController = {
 	
 
 	// validacion del registro
-	/*async*/ processRegister: (req, res) => {
+		processRegister: async (req, res) => {
 		const resultValidation = validationResult(req)
 	
        if(resultValidation.errors.length > 0){
@@ -69,8 +69,13 @@ const userController = {
           });
 
         }
-
-		let userInDb = User.findByField('email', req.body.email)
+		
+		let userInDb = await db.User.findOne({
+			where: {
+				email: req.body.email
+			}
+		})
+		
 		if(userInDb) {
 			return res.render(path.resolve('src/views/user/register.ejs'),{
 				errors: {
@@ -78,19 +83,25 @@ const userController = {
 						msg: "Este email ya esta registrado"
 					}
 				},
-				oldData: req.body
+				oldData: req.body,
+				
+				user: req.session.user
 			})
 		}
 
         
 		let userToCreate = {
-			...req.body, 
 			password: bcrypt.hashSync(req.body.password, 10),
-			image: req.file.filename
+			image: req.file.filename,
+			nombre: req.body.fullName,
+			email: req.body.email,
+			fecha_nacimiento: req.body.fnac,
+			id_roles: 1002,
+			
 		}
 
-		// await db.User.create(userToCreate)
-		User.create(userToCreate);
+		await db.User.create(userToCreate)
+
         return res.redirect('/users/login')
 		
 	},
