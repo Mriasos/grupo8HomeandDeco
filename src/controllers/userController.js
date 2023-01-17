@@ -75,7 +75,8 @@ const userController = {
        if(resultValidation.errors.length > 0){
         return res.render((path.resolve('src/views/user/register.ejs')), {
                errors: resultValidation.mapped(),
-              oldData: req.body
+              oldData: req.body,
+			  user: req.session.user
           });
 
         }
