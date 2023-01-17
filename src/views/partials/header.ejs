@@ -11,7 +11,8 @@
 
        <!--ACA TENDRIA QUE IR EL PERFIL DEL LOGIN--> 
        <% if(user){ %>
-        <div><img src="./imagenes/users/<%-user.image%>" alt=""></div>
+       <div class="logout"><a href="/logout"><button style="font-size:20px">Salir<i class="fa fa-sign-out"></i></button></a></div>
+        <div class="img_user"><img src="./imagenes/users/<%-user.image%>" class="img_1" alt=""></div>
     
      <% }else{ %>
         
