@@ -19,3 +19,7 @@ En cuanto a los temas que se abarcan en este sprint, notamos una complejidad muy
 ## SPRINT 5:
 Ya en este momento se hace mas dificil coordinar la junta de los integrantes del grupo, pero whatsapp sigue siendo la base de la coordinacion y organizacion de los trabajos en grupo.
 Este sprint se hizo bastante dificil para nosotros ya que hubieron temas que hay que ponerle mucha practica como las validaciones y es una de las cosas que mas se dificulto a esta altura. Pudimos resolver las dificultades que tuvimos, algunas gracias a los profesores y otras por labor propio, pero con bastante esfuerzo y dedicacion.
+
+## SPRINT 6:
+Como resultado el sprint 5 nos hizo notar que estamos en condiciones en poner en practica los sucesivos conocimientos que vamos incorporando para nuestra aplicacion. Estos nuevos conocimientos que se suman a los trabajados en los otros sprints nos fueron dando una visión cada vez mas completa de nuestra aplicación y los pasos recorridos que se plasman en el sprint que finalizamos con fecha de entrega 18.
+Asimismo nos encontramos poniendo foco en la gestion de los tiempos para avanzar colaborativamente con el proyecto integrador.
