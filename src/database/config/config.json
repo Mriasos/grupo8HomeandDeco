@@ -1,8 +1,8 @@
-{
+module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "hangar",
+    "database": "hangar_eccomer",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
