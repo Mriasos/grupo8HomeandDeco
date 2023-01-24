@@ -4,47 +4,53 @@
   "fullName": "MARCOS  ",
   "email": "marcos@gmail.com",
   "fnac": "2022-12-09",
-  "password": "$2a$10$bLYL9aki4817bHmHAf3ZIuZZYshvL6z0jLgq54omdIxf.3vatknWW",
-  "image": "1671314013519_img.jpg"
+  "password": "$2a$10$bL",
+  "image": "1671314013519_img.jpg",
+  "roles": "1"
  },
  {
   "id": 2,
   "fullName": "MARENGO ANTONELLA ",
   "email": "ANTONELLAMARENGO25@GMAIL.COM",
   "fnac": "1994-10-25",
-  "password": "$2a$10$.DG2wfplg3qvv.E5xoYMTuIgWhEnUbUjXFyFc2.8F/H.TX2H666Um",
-  "image": "1671315366826_img.jpg"
+  "password": "$2a$10$.D",
+  "image": "1671315366826_img.jpg",
+  "roles": "2"
  },
  {
   "id": 3,
   "fullName": "MENIN THIAGO",
   "email": "THIAGO123@GMAIL.COM",
   "fnac": "2022-12-15",
-  "password": "$2a$10$pfpOwP6sHpSi6q2xODlVA.sFtjWKw321qs0ys0hF2MX4Df.EwI/cm",
-  "image": "1671316616065_img.jpg"
+  "password": "$2a$10$pf",
+  "image": "1671316616065_img.jpg",
+  "roles": "2"
  },
  {
   "id": 4,
   "fullName": "thiago",
   "email": "menin@mail.com",
   "fnac": "2023-01-18",
-  "password": "$2a$10$bBIIslTNKwViOFIcPG.dmO5zeAJJAtTGxUNdBDBMx9FE/cI.bvvkq",
-  "image": "1673565316935_img.jpeg"
+  "password": "cI.bvvkq",
+  "image": "1673565316935_img.jpeg",
+  "roles": "1"
  },
  {
   "id": 5,
   "fullName": " fernando",
   "email": "fer@gmail.com",
   "fnac": "2023-01-01",
-  "password": "$2a$10$ErZNlgffMBE3F9H6U6hW.e/FVyGyuvpvJiurDiOr6oiXKC4C9HIXG",
-  "image": "1673734627125_img.jpg"
+  "password": "F9H6U6hW",
+  "image": "1673734627125_img.jpg",
+  "roles": "2"
  },
  {
   "id": 6,
   "fullName": "ANTOMARENGO",
   "email": "ANTITO@GMAIL.COM",
   "fnac": "2023-01-07",
-  "password": "$2a$10$5xJrQc75XN14n7SweaxCVukUfW7toIb5dJJSWRAVtphigjJFm89C2",
-  "image": "1673823076154_img.jpg"
+  "password": "phigjJFm89C2",
+  "image": "1673823076154_img.jpg",
+  "roles": "2"
  }
 ]
