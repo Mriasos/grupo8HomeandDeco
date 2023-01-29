@@ -1,4 +1,4 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = function (sequelize, dataTypes) {
     let alias= "Producto_categoria";
     let cols = {
         id:{
@@ -21,9 +21,9 @@ module.exports = (sequelize, dataTypes) => {
     Producto_categoria.associate = function(models){
         Producto_categoria.belongsTo(models.Productos, {
             as : 'Productos',
-            foreignKey : 'id'
+            foreignKey : 'Producto_categorias_id1'
         
-    })
+    });
     
 }
     return Producto_categoria;

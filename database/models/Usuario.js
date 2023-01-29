@@ -1,4 +1,4 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = function (sequelize, dataTypes)  {
 let alias= "Usuario";
 let cols = {
     id:{
@@ -23,11 +23,11 @@ let config = {
 
 const Usuario = sequelize.define(alias, cols, config);
 Usuario.associate = function(models){
-    Usuario.hasMany(models.Roles, {
-        as : 'roles',
+    Usuario.belongsTo(models.Role, {
+        as : 'role',
         foreignKey : 'Roles_id'
 
-    })
+    });
 }        
 return Usuario;
 

@@ -1,4 +1,4 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = function (sequelize, dataTypes) {
     let alias= "Producto";
     let cols = {
         id:{
@@ -28,8 +28,13 @@ module.exports = (sequelize, dataTypes) => {
         Producto.hasMany(models.Producto_colores, {
             as : 'producto_colores',
             foreignKey : 'Producto_colores_id1'
-    //falta relacionionar Producto con Producto-categoria 
-        })
+    
+        });
+        
+            Producto.hasMany(models.Producto_categorias, {
+                as : 'producto_categorias',
+                foreignKey : 'Producto_categorias_id1'
+         });        
     }        
     return Producto;
     
