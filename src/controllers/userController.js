@@ -7,7 +7,7 @@ const User = require('../models/User')
 //Requiero el paquete para comparar las contraseñas  que tengo hash
 const bcrypt = require('bcryptjs');
 
-const db = require('../database/models');
+const db = require('../../database/models');
 
 const userFilePath = path.resolve('./src/data/user.json');
 const user = JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
@@ -104,11 +104,10 @@ const userController = {
 		let userToCreate = {
 			password: bcrypt.hashSync(req.body.password, 10),
 			image: req.file.filename,
-			nombre: req.body.fullName,
+			full_name: req.body.full_name,
 			email: req.body.email,
-			fecha_nacimiento: req.body.fnac,
-			id_roles: 1002,
-			
+			fnac: req.body.fnac,
+			rol_id: req.body.rol,
 		}
 
 		await db.User.create(userToCreate)

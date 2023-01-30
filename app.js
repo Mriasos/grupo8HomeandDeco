@@ -27,7 +27,7 @@ app.use(session({
 
 const puerto = 3000;
 app.listen(puerto, ()=> {
-    console.log('iniciando')
+    console.log('Servidor funcionando en el puerto 3000')
 });
 
 

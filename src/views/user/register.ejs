@@ -16,10 +16,10 @@
 
     <form action="/users/register" method="post" class="registro"  enctype="multipart/form-data" > 
         <h1 id="tituloform">Regístrate</h1>
-        <label id="fullName">Escriba su nombre completo: <input type="text" class="form_input" id="fullName" name="fullName" value="<%= locals.oldData ? oldData.fullName : null %> "/></label>
-        <% if(locals.errors && errors.fullName) { %>
+        <label id="full_name">Escriba su nombre completo: <input type="text" class="form_input" id="full_name" name="full_name" value="<%= locals.oldData ? oldData.full_name : null %> "/></label>
+        <% if(locals.errors && errors.full_name) { %>
          <div class="error-registro">
-            <%= errors.fullName.msg %> 
+            <%= errors.full_name.msg %> 
          </div>
             <% } %>  
 
