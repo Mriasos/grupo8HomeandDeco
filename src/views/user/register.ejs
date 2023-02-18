@@ -15,7 +15,7 @@
      
 
 
-         <form action="/users/register" method="post" class="registro" enctype="multipart/form-data">
+         <form action="/users/register" method="post" class="registro" id = 'registro-form' enctype="multipart/form-data">
             <h1 id="tituloform">Regístrate</h1>
             <label id="full_name">Escriba su nombre completo: <input type="text" class="form_input" id="full_name"
                   name="full_name" value="<%= locals.oldData ? oldData.full_name : null %> " /></label>
@@ -63,6 +63,18 @@
 
 
 </body>
+
+<script>
+
+
+
+// Aca deberian ir validaciones del front.
+// Por ahora solamente se estan validando desde el back end y enviandosela al cliente.
+
+
+
+</script>
+
 <footer>
    <%- include ('../partials/footer.ejs') %>
      
