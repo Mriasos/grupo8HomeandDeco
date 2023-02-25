@@ -3,38 +3,51 @@
 const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
-    class usuarios extends Model {
-        /**
-         * Helper method for defining associations.
-         * This method is not a part of Sequelize lifecycle.
-         * The `models/index` file will call this method automatically.
-         */
-        static associate(models) {
-
-            usuarios.belongsTo(models.roles, {
-                foreignKey: 'rolId',
-                as: 'rol',
-            });
-        }
+  class usuarios extends Model {
+    static associate(models) {
+      usuarios.belongsTo(models.roles, {
+        foreignKey: 'rolId',
+        as: 'rol',
+      });
     }
 
-    usuarios.init({
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        full_name: DataTypes.STRING,
-        fnac: DataTypes.STRING,
-        password: DataTypes.STRING,
-        image: DataTypes.STRING,
-        email: DataTypes.STRING,
-        rol_id: DataTypes.INTEGER
+    static async findAll() {
+      return await usuarios.findAll();
+    }
 
-    }, {
-        sequelize,
-        modelName: 'usuarios',
-    });
+    static async findByPk(id) {
+      return await usuarios.findByPk(id);
+    }
 
-    return usuarios;
+    static async findByField(field, value) {
+      return await usuarios.findOne({ where: { [field]: value } });
+    }
+
+    static async createOne(userData) {
+      return await usuarios.create(userData);
+    }
+
+    static async deleteOne(id) {
+      return await usuarios.destroy({ where: { id } });
+    }
+  }
+
+  usuarios.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    full_name: DataTypes.STRING,
+    fnac: DataTypes.STRING,
+    password: DataTypes.STRING,
+    image: DataTypes.STRING,
+    email: DataTypes.STRING,
+    rol_id: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'usuarios',
+  });
+
+  return usuarios;
 };

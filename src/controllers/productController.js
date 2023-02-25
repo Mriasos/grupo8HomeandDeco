@@ -1,4 +1,4 @@
-const path = require('path');
+/* const path = require('path');
 const fs = require('fs')
 
 
@@ -90,4 +90,103 @@ const controller = {
 };
 
 
-module.exports= controller
+module.exports= controller */
+
+
+
+const Productos = require('../../database/models').productos;
+
+const controller = {
+	// listado de todos los productos
+	index: async (req, res) => {
+		try {
+			const products = await Productos.findAll();
+			res.render(('productList'), {product: products});
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al obtener los productos');
+		}
+	},
+	
+
+	// detalle de un producto
+	detail: async (req, res) => {
+		try {
+			const productId = req.params.productId;
+			const productToFind = await Productos.findByPk(productId, {
+				include: ['productoCategoria', 'productoColor']
+			});
+			if(!productToFind){
+				return res.send('No se encontro el producto buscado');
+			}
+			return res.render(('detail'), {productToFind: productToFind,
+				user: req.session.user});
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al obtener el producto');
+		}
+	},
+
+	// Crear - Form de creacion de un producto
+	create: (req, res) => {
+		res.render('createproduct');
+	},
+	
+	// Create -  accion de creacion 
+	store: async (req, res) => {
+		try {
+			const camposNuevosProductos = req.body;
+			await Productos.create(camposNuevosProductos);
+			res.redirect("/");
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al crear el producto');
+		}
+	},
+
+	// Actualizar - Form para editar
+	edit: async (req, res) => {
+		try {
+			const productId = req.params.productId;
+			const productToFind = await Productos.findByPk(productId);
+			if(!productToFind){
+				return res.send('No se encontro el producto buscado');
+			}
+			return res.render(('editProduct'), {productToFind: productToFind });
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al obtener el producto');
+		}
+	},
+
+	// Actualizar un producto
+	update: async (req, res) => {
+		try {
+			const productId = req.params.productId;
+			const update = req.body;
+			await Productos.update(update, {
+				where: {id: productId}
+			});
+			res.redirect("/");
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al actualizar el producto');
+		}
+	},
+
+	// Eliminar un producto
+	destroy : async (req, res) => {
+		try {
+			const productId = req.params.productId;
+			await Productos.destroy({
+				where: {id: productId}
+			});
+			res.redirect("/");
+		} catch (error) {
+			console.log(error);
+			res.send('Ocurrió un error al eliminar el producto');
+		}
+	}
+};
+
+module.exports= controller;

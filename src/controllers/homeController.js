@@ -1,4 +1,4 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.resolve('./src/data/productDataBase.json');
@@ -30,6 +30,27 @@ const homeController = {
     //search: (req, res) => {
 	//	res.render('results')
 	//},
+}; */
+const db = require('../../database/models');
+const Productos = db.productos;
+
+const homeController = {
+	index: async (req, res) => {
+		try {
+			const products = await Productos.findAll({
+				where: {
+					categoria: 'in-sale'
+				}
+			});
+			return res.render('home', {
+				productos: products,
+				user: req.session.user
+			});
+		} catch (error) {
+			console.log(error);
+			return res.send('Hubo un error');
+		}
+	}
 };
 
 module.exports = homeController;
