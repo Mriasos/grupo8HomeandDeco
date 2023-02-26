@@ -8,19 +8,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema hangar_eccomer
+-- Schema hangar_eccomerce
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema hangar_eccomer
+-- Schema hangar_eccomerce
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `hangar_eccomer` DEFAULT CHARACTER SET utf8mb4 ;
-USE `hangar_eccomer` ;
+CREATE SCHEMA IF NOT EXISTS `hangar_eccomerce` DEFAULT CHARACTER SET utf8mb4 ;
+USE `hangar_eccomerce` ;
 
 -- -----------------------------------------------------
--- Table `hangar_eccomer`.`Roles`
+-- Table `hangar_eccomerce`.`Roles`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Roles` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Roles` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NULL,
   `descripcion` VARCHAR(45) NULL,
@@ -29,31 +29,31 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hangar_eccomer`.`Usuarios`
+-- Table `hangar_eccomerce`.`Usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Usuarios` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `fullName` VARCHAR(45) NULL,
   `fnac` VARCHAR(45) NULL,
   `password` VARCHAR(45) NULL,
   `image` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
-  `roles_id` INT NULL,
-  `Roles_id` INT NOT NULL,
+  `rol_id` INT NULL,
+  `Rol_id` INT NOT NULL,
   PRIMARY KEY (`id`, `Roles_id`),
   INDEX `fk_Usuarios_Roles_idx` (`Roles_id` ASC),
   CONSTRAINT `fk_Usuarios_Roles`
     FOREIGN KEY (`Roles_id`)
-    REFERENCES `hangar_eccomer`.`Roles` (`id`)
+    REFERENCES `hangar_eccomerce`.`Roles` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hangar_eccomer`.`Producto_categorias`
+-- Table `hangar_eccomerce`.`Producto_categorias`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Producto_categorias` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Producto_categorias` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `image` VARCHAR(45) NULL,
   `titulo` VARCHAR(45) NULL,
@@ -62,9 +62,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hangar_eccomer`.`Producto_colores`
+-- Table `hangar_eccomerce`.`Producto_colores`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Producto_colores` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Producto_colores` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `titulo` VARCHAR(45) NULL,
   `descripcion` VARCHAR(45) NULL,
@@ -73,9 +73,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `hangar_eccomer`.`Productos`
+-- Table `hangar_eccomerce`.`Productos`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Productos` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Productos` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NULL,
   `descripcion` VARCHAR(45) NULL,
@@ -91,12 +91,12 @@ CREATE TABLE IF NOT EXISTS `hangar_eccomer`.`Productos` (
   INDEX `fk_Productos_Producto_colores1_idx` (`Producto_colores_id1` ASC),
   CONSTRAINT `fk_Productos_Producto_categorias1`
     FOREIGN KEY (`Producto_categorias_id1`)
-    REFERENCES `hangar_eccomer`.`Producto_categorias` (`id`)
+    REFERENCES `hangar_eccomerce`.`Producto_categorias` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Productos_Producto_colores1`
     FOREIGN KEY (`Producto_colores_id1`)
-    REFERENCES `hangar_eccomer`.`Producto_colores` (`id`)
+    REFERENCES `hangar_eccomerce`.`Producto_colores` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

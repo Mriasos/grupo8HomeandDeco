@@ -37,11 +37,7 @@ const Productos = db.productos;
 const homeController = {
 	index: async (req, res) => {
 		try {
-			const products = await Productos.findAll({
-				where: {
-					categoria: 'in-sale'
-				}
-			});
+			const products = await Productos.findAll();
 			return res.render('home', {
 				productos: products,
 				user: req.session.user

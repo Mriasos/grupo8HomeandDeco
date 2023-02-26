@@ -6,13 +6,9 @@ module.exports = (sequelize, DataTypes) => {
   class usuarios extends Model {
     static associate(models) {
       usuarios.belongsTo(models.roles, {
-        foreignKey: 'rolId',
-        as: 'rol',
+        foreignKey: 'rol_id',
+        as: 'roles',
       });
-    }
-
-    static async findAll() {
-      return await usuarios.findAll();
     }
 
     static async findByPk(id) {
