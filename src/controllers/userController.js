@@ -222,7 +222,7 @@ const userController = {
         full_name: req.body.full_name,
         email: req.body.email,
         fnac: req.body.fnac,
-        rol_id: req.body.rol,
+        //Roles_id: req.body.rol,
       };
 
       await db.usuarios.createOne(userToCreate);

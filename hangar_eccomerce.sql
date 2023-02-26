@@ -38,8 +38,7 @@ CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Usuarios` (
   `password` VARCHAR(45) NULL,
   `image` VARCHAR(45) NULL,
   `email` VARCHAR(45) NULL,
-  `rol_id` INT NULL,
-  `Rol_id` INT NOT NULL,
+  `Roles_id` INT ,
   PRIMARY KEY (`id`, `Roles_id`),
   INDEX `fk_Usuarios_Roles_idx` (`Roles_id` ASC),
   CONSTRAINT `fk_Usuarios_Roles`

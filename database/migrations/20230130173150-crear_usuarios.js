@@ -12,7 +12,7 @@ module.exports = {
       password: Sequelize.STRING,
       image: Sequelize.STRING,
       email: Sequelize.STRING,
-      rol_id: {
+      Roles_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'roles',
