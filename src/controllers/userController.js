@@ -144,7 +144,7 @@ const userController = {
         if (contraseñaCorrecta) {
           delete userToLogin.password;
           req.session.user = userToLogin;
-          return res.redirect('/users/profile');
+          return res.redirect('/');
         }
         return res.render(path.resolve('src/views/user/login.ejs'), {
           errors: {
@@ -242,9 +242,12 @@ const userController = {
     }
   },
   //profile de usuario
-profile: async (req, res) => {
+  profile: (req, res) => {
+		return res.render(path.resolve('src/views/home.ejs'), )
+	},
+/*profile: async (req, res) => {
 	try {
-	  const user = await db.User.findByPk(req.session.user.id, {
+	  const user = await db.usuarios.findByPk(req.session.user.id, {
 		include: {
 		  model: db.Roles,
 		  as: 'rol'
@@ -255,7 +258,7 @@ profile: async (req, res) => {
 	  console.error(error);
 	  res.render(path.resolve('src/views/error.ejs'), { error });
 	}
-  },
+  },*/
 }
 
 

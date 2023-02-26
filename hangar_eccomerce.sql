@@ -31,7 +31,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `hangar_eccomerce`.`Usuarios`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`Usuarios` (
+CREATE TABLE IF NOT EXISTS `hangar_eccomerce`.`usuarios` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `fullName` VARCHAR(45) NULL,
   `fnac` VARCHAR(45) NULL,
