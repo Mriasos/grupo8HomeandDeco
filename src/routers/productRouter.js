@@ -18,11 +18,9 @@ router.get('/detail/:productId/', productController.detail);
 
 /*** EDITAR UN PRODUCTO ***/ 
 router.get('/edit/:productId', productController.edit); 
-router.put('/:id', productController.update); 
-
-
+router.put('/edit/:productId/', productController.update); 
 
 /*** ELIMINAR UN PRODUCTO ***/
-router.delete('/:id', productController.destroy);  
+router.delete('/product/delete/:productId/', productController.destroy);
 
 module.exports = router

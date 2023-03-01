@@ -16,27 +16,27 @@
                 <div class="container-product-detail">
                     <div class="imagenes">
                         <div class="img-producto-principal">
-                            <img width="100" class="img-principal" src="<%= productToFind.image %> " alt="Lampara"></img>
+                            <img width="100" class="img-principal" src="http://localhost:3000/imagenes/<%= productToFind.image %>" alt="Lampara"></img>
                         </div>
                       
                     </div>
                     <div class="main-article">
                         <div class="flex-conteiner-detalle">
                             <h1 class="titulo">
-                              <%= productToFind.name %> 
+                              <%= productToFind.nombre %> 
                             </h1>
                             <p class="precio">
-                               $ <%= productToFind.price %> 
+                               $ <%= productToFind.precio %> 
                             </p>
                             <div class="build-credit-card">
                                 <p><i class="far fa-credit-card"></i></p>
                                 <strong class="cuotas"> 6 </strong>
                                 <p> CUOTAS SIN INTERES DE</p>
-                                <strong class="precio-cuotas"> $ <%= productToFind.price  / 6 %> </strong>
+                                <strong class="precio-cuotas"> $ <%= productToFind.precio  / 6 %> </strong>
                             </div>
                             <div class="descuento-efectivo">
                                 <p><i class="far fa-money-bill-alt"></i></p>
-                                <strong class="porc-descuento"> <%= productToFind.discount %> % </strong>
+                                <strong class="porc-descuento"> <%= productToFind.descuento %> % </strong>
                                 <p>pagando en efectivo</p>
                             </div>
                           
@@ -66,7 +66,7 @@
                         </div>
                         <div class="detalle">
                             <h3><strong>DESCRIPCION</strong></h3>
-                            <%= productToFind.description %>
+                            <%= productToFind.descripcion %>
                         </div>
                     </div>
                 </div>

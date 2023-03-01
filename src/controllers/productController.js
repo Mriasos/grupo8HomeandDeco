@@ -152,11 +152,12 @@ const controller = {
 			if(!productToFind){
 				return res.send('No se encontro el producto buscado');
 			}
-			return res.render(('editProduct'), {productToFind: productToFind });
+			return res.render(('editProduct'), {productToFind: productToFind, user: req.session.user });
 		} catch (error) {
 			console.log(error);
 			res.send('Ocurrió un error al obtener el producto');
 		}
+		
 	},
 
 	// Actualizar un producto
@@ -164,6 +165,8 @@ const controller = {
 		try {
 			const productId = req.params.productId;
 			const update = req.body;
+			console.log(productId)
+			console.log(update)
 			await Productos.update(update, {
 				where: {id: productId}
 			});
@@ -178,6 +181,7 @@ const controller = {
 	destroy : async (req, res) => {
 		try {
 			const productId = req.params.productId;
+			console.log("Hola")
 			await Productos.destroy({
 				where: {id: productId}
 			});

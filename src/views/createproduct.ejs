@@ -19,11 +19,11 @@
                 </div>
                 <div class="name">
                     <label for="nombre">Nombre del producto</label>
-                    <input id="nombre" type="text" name="name">
+                    <input id="nombre" type="text" name="nombre">
                 </div>
                 <div class="description">
                     <label for="descripcion">Descripcion del producto</label>
-                    <textarea id="descripcion" type="text" name="description"> </textarea>
+                    <textarea id="descripcion" type="text" name="descripcion"> </textarea>
                 </div>
                 <div class="img-cargar-product">
                     <label for="imagen">Imagen del producto</label>
@@ -31,35 +31,21 @@
                 </div>
                 <div class="category">
                     <label for="category" class="form-label">Categoría:</label>
-                    <select name="category" id="category" class="form-input">
+                    <select name="producto_categoria_id" id="category" class="form-input">
                         <option value="">Elegí</option>
-                        <option value="in-sale">En oferta</option>
-                        <option value="visited" >Últimos visitados</option>
+                        <option value="1">En oferta</option>
+                        <option value="2" >Últimos visitados</option>
                     </select>
                 </div>
 
                 <div class="discount">
                     <label for="discount">Descuento del producto</label>
-                    <input id="discount" type="discount" name="discount">
+                    <input id="discount" type="number" name="descuento">
                 </div>
-               <!--<div class="product-color">
-                    <label for="color">Color del producto</label>
-                    <input id="color" type="color" name="color">
-                </div>
-
-                <div class = "product-tam">
-            <label for="tamanio">Tamaño</label>
-            <select  class = "button-tam" name = "tamanio">
-                <option disabled="">Seleccione una Opcion</option>
-                        <option value="ESTANDAR">ESTANDAR</option>
-                        <option value="GRANDE">GRANDE</option>
-                        <option value="CHICO/A">CHICO/A</option>
-            </select>
-        </div> -->
-
+    
                 <div class="price">
                     <label for="price">Precio del producto</label>
-                    <input id="price" type="number" name="price">
+                    <input id="precio" type="number" name="precio">
                 </div>
 
                 <button class="button-create">CARGAR</button>
