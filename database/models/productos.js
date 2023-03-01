@@ -20,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
                 foreignKey: 'productoColorId',
                 as: 'productoColor',
             });
+       /*      productos.findAll = function findall(productId){
+                var query = sql.query('SELECT * FROM Productos WHERE id =' + productId);
+                return query;
+            } */
         }
     }
 

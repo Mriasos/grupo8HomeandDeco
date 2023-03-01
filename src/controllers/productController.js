@@ -113,7 +113,7 @@ const controller = {
 	detail: (req, res) => {
 		const products = Productos.findAll();
 		const productId = req.params.productId
-		const productToFind = products.find((product) => product.id == productId)
+		const productToFind = Productos.findByPk((product) => product.id == productId)
 		if(productToFind == undefined){
 			return res.send('No se encontro el producto buscado')
 		}
