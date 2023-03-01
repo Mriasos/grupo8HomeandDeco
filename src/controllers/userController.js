@@ -32,7 +32,6 @@ const userController = {
 					req.session.user = userToLogin;
 					return res.redirect('/users/profile')
 				}
-				return res.render(path.resolve(('src/views/user/login.ejs')),{
 					errors: {
 						email:{
 							msg: 'Las credenciales son invalidas'
@@ -180,12 +179,10 @@ const userController = {
     req.session.destroy((err) => {
       if (err) {
         console.log(err);
-      } else {
-        res.redirect('/users/login');
       }
+      res.redirect('/login');
     });
   },
-
   register: (req, res) => {
     return res.render(path.resolve('src/views/user/register.ejs'), { user: req.session.user });
   },

@@ -110,26 +110,23 @@ const controller = {
 	
 
 	// detalle de un producto
-	detail: async (req, res) => {
-		try {
-			const productId = req.params.productId;
-			const productToFind = await Productos.findByPk(productId, {
-				include: ['productoCategoria', 'productoColor']
-			});
-			if(!productToFind){
-				return res.send('No se encontro el producto buscado');
-			}
-			return res.render(('detail'), {productToFind: productToFind,
-				user: req.session.user});
-		} catch (error) {
-			console.log(error);
-			res.send('Ocurrió un error al obtener el producto');
+	detail: (req, res) => {
+		const products = Productos.findAll();
+		const productId = req.params.productId
+		const productToFind = products.find((product) => product.id == productId)
+		if(productToFind == undefined){
+			return res.send('No se encontro el producto buscado')
 		}
+		return res.render(('detail'), {productToFind: productToFind,
+		user: req.session.user})
+
 	},
 
 	// Crear - Form de creacion de un producto
 	create: (req, res) => {
-		res.render('createproduct');
+		res.render('createproduct',{
+			user: req.session.user
+		});
 	},
 	
 	// Create -  accion de creacion 
