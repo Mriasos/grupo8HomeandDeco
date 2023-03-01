@@ -4,7 +4,6 @@ const path = require('path');
 const publicPath = path.resolve('public');
 const session = require('express-session')
 const bodyParser = require('body-parser')
-const fileUpload = require('express-fileupload');
 
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
@@ -26,7 +25,6 @@ app.use(session({
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(fileUpload());
 
 const puerto = 3000;
 app.listen(puerto, ()=> {

@@ -5,10 +5,7 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class usuarios extends Model {
     static associate(models) {
-      usuarios.belongsTo(models.roles, {
-        foreignKey: 'Roles_id',
-        as: 'roles',
-      });
+     
     }
 
     static async findByPk(id) {
@@ -39,7 +36,6 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
     image: DataTypes.STRING,
     email: DataTypes.STRING,
-    Roles_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'usuarios',

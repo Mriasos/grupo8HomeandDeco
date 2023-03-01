@@ -24,7 +24,7 @@
                   <%= errors.full_name.msg %>
                </div>
                <% } %>
-
+               
                   <label id="email">Correo electrónico: <input type="email" class="form_input" id="email" name="email"
                         value="<%= locals.oldData ? oldData.email : null %> " /></label>
                   <% if(locals.errors && errors.email) { %>
@@ -32,6 +32,7 @@
                         <%= errors.email.msg %>
                      </div>
                      <% } %>
+
                         <label id="fnac">Fecha de nacimiento: <input type="date" class="form_input" id="fnac"
                               name="fnac" value="<%= locals.oldData ? oldData.fnac : null %> " /></label>
                         <% if(locals.errors && errors.fnac) { %>

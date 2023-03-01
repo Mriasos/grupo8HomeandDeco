@@ -220,7 +220,7 @@ const userController = {
         full_name: req.body.full_name,
         email: req.body.email,
         fnac: req.body.fnac,
-        //Roles_id: req.body.rol,
+        rol_id: req.body.rol,
       };
 
       await db.usuarios.createOne(userToCreate);
@@ -229,11 +229,6 @@ const userController = {
     } catch (error) {
       console.log(error);
       return res.render(path.resolve('src/views/user/register.ejs'), {
-        errors: {
-          email: {
-            msg: 'Hubo un problema en el servidor. Intente nuevamente más tarde.',
-          },
-        },
         oldData: req.body,
         user: req.session.user,
       });
