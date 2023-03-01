@@ -147,7 +147,7 @@ const controller = {
 	// Actualizar - Form para editar
 	edit: async (req, res) => {
 		try {
-			const productId = req.params.productId;
+			const {productId} = req.params;
 			const productToFind = await Productos.findByPk(productId);
 			if(!productToFind){
 				return res.send('No se encontro el producto buscado');
@@ -163,13 +163,13 @@ const controller = {
 	// Actualizar un producto
 	update: async (req, res) => {
 		try {
-			const productId = req.params.productId;
-			const update = req.body;
-			console.log(productId)
-			console.log(update)
-			await Productos.update(update, {
-				where: {id: productId}
-			});
+			const {productId} = req.params;
+			console.log(req.body)
+			const productToFind = await Productos.findByPk(productId);
+
+			await productToFind.update({
+				...req.body
+			})
 			res.redirect("/");
 		} catch (error) {
 			console.log(error);

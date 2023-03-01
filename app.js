@@ -3,11 +3,12 @@ const app = express();
 const path = require('path');
 const publicPath = path.resolve('public');
 const session = require('express-session')
+const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload');
 
 app.use(express.static(publicPath));
 app.set('view engine', 'ejs')
 app.set('views', 'src/views')
-
 
 
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -23,7 +24,9 @@ app.use(session({
     saveUninitialized: false
 }))
 
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use(fileUpload());
 
 const puerto = 3000;
 app.listen(puerto, ()=> {

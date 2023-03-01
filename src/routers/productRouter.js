@@ -3,7 +3,6 @@ let router = express.Router()
 
 const productController = require ('../../src/controllers/productController')
 
-
 /*** MOSTRAR TODOS LOS PRODUCTOS ***/ 
 router.get('/', productController.index) 
 //router.get('/search', productController.search); 
@@ -14,11 +13,11 @@ router.post('/', productController.store);
 
 
 /*** ACTUALIZAR UN PRODUCTO ***/ 
-router.get('/detail/:productId/', productController.detail); 
+router.get('/detail/:productId', productController.detail); 
 
 /*** EDITAR UN PRODUCTO ***/ 
 router.get('/edit/:productId', productController.edit); 
-router.put('/edit/:productId/', productController.update); 
+router.put('/edit/:productId', productController.update); 
 
 /*** ELIMINAR UN PRODUCTO ***/
 router.delete('/delete/:productId', productController.delete);
