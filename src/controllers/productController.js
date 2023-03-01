@@ -178,10 +178,9 @@ const controller = {
 	},
 
 	// Eliminar un producto
-	destroy : async (req, res) => {
+	delete : async (req, res) => {
 		try {
-			const productId = req.params.productId;
-			console.log("Hola")
+			const {productId} = req.params;
 			await Productos.destroy({
 				where: {id: productId}
 			});

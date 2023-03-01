@@ -63,9 +63,8 @@
 
             </form>
             <div class="box-buttonDelete">
-                <form class="eliminar-producto" action="/delete/<%= productToFind.id %>" method="delete">
-                    <button type="submit" class="delete"
-                        onclick="return confirm('Estas seguro que deseas eliminar este producto?')"> ELIMINAR </button>
+                <form action="/product/delete/<%= productToFind.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="delete" onclick="return confirm('Estas seguro que deseas eliminar este producto?')"> ELIMINAR </button>
                 </form>
             </div>
 

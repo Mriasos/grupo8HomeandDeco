@@ -176,13 +176,14 @@ const userController = {
   },
 
   logout: (req, res) => {
-    req.session.destroy((err) => {
-      if (err) {
-        console.log(err);
-      }
-      res.redirect('/login');
-    });
+    try {
+      req.session.destroy();
+      res.redirect('/');
+  } catch (error) {
+      console.log(error);  
+  }
   },
+  
   register: (req, res) => {
     return res.render(path.resolve('src/views/user/register.ejs'), { user: req.session.user });
   },

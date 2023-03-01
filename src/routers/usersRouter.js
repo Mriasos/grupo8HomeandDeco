@@ -32,7 +32,7 @@ router.get('/login', userController.login);
 
 router.post('/login', userController.processLogin);
 
-router.delete('/logout', userController.logout);
+router.get('/logout', userController.logout);
 
 router.get('/profile', userController.profile);
 
