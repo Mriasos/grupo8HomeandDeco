@@ -22,3 +22,4 @@ Nuestra audiencia son las personas que disfrutan de la funcionalidad, las línea
 Versátil, creativo y adaptativo. Amante de la salud física.
 + ***Valentin Milone***: Soy una persona proactiva, dispuesta a seguir creciendo en el mundo de programación, el cual es un mundo que me entusiasma y me lleva a querer aprender cada día más.
 + ***Thiago Menin***: Amante de la tecnologia y el deporte. Nuevo en el mundo de la programacion y siempre dispuesto a aprender cosas nuevas!
+-
