@@ -111,15 +111,18 @@ const controller = {
 
 	// detalle de un producto
 	detail: (req, res) => {
-		const products = Productos.findAll();
-		const productId = req.params.productId
-		const productToFind = Productos.findByPk((product) => product.id == productId)
-		if(productToFind == undefined){
-			return res.send('No se encontro el producto buscado')
-		}
-		return res.render(('detail'), {productToFind: productToFind,
-		user: req.session.user})
-
+		Productos.findAll().then(products => {
+			const productId = req.params.productId
+			const productToFind = products.find((product) => product.id == productId)
+			if(productToFind == undefined){
+				return res.send('No se encontro el producto buscado')
+			}
+			return res.render(('detail'), {productToFind: productToFind,
+			user: req.session.user})
+		}).catch(error => {
+			console.log(error);
+			res.send('Ocurrió un error al buscar el producto.')
+		})
 	},
 
 	// Crear - Form de creacion de un producto
